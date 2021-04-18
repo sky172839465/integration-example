@@ -3,26 +3,26 @@ module.exports = {
     browser: true,
     node: true,
     es2021: true,
-    'jest/globals': true,
+    'jest/globals': true
   },
   globals: {
     page: true,
     browser: true,
     context: true,
-    jestPuppeteer: true,
+    jestPuppeteer: true
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:jest/recommended',
+    'plugin:jest/recommended'
   ],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react', 'jest', 'jsx-a11y'],
   rules: {
@@ -32,13 +32,14 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     semi: ['error', 'never'],
     quotes: ['error', 'single'],
+    'comma-dangle': ['error', 'never'],
     'quote-props': ['error', 'as-needed'],
     'jsx-quotes': ['error', 'prefer-single'],
-    'react/react-in-jsx-scope': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
   settings: {
     react: {
-      version: 'detect',
-    },
+      version: 'detect'
+    }
   }
 }
