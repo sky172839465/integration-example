@@ -1,5 +1,8 @@
 describe('Google', () => {
+  let page
+
   beforeAll(async () => {
+    page = (await browser.pages())[0]
     await page.goto('https://google.com')
   })
 
