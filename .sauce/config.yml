@@ -15,9 +15,6 @@ docker:
 rootDir: ./__e2e__
 puppeteer:
   version: 8.0.0
-image:
-  base: saucelabs/stt-puppeteer-jest-node
-  version: latest
 suites:
   - name: "chrome"
     testMatch: ["**/*.test.js"]
