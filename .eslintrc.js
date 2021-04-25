@@ -9,7 +9,10 @@ module.exports = {
     page: true,
     browser: true,
     context: true,
-    jestPuppeteer: true
+    // codeceptjs
+    Feature: true,
+    Scenario: true,
+    actor: true
   },
   extends: [
     'eslint:recommended',
