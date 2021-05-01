@@ -1,3 +1,4 @@
+const os = require('os')
 const { setHeadlessWhen } = require('@codeceptjs/configure')
 const packageConfig = require('./package.json')
 
@@ -8,7 +9,8 @@ setHeadlessWhen(process.env.HEADLESS)
 const {
   SAUCE_USERNAME,
   SAUCE_ACCESS_KEY,
-  RUNNER
+  RUNNER,
+  IS_GLOBAL_WEBSITE
 } = process.env
 
 const RUN_WITH_SAUCE = RUNNER === 'SAUCE'
@@ -17,7 +19,10 @@ const DEFAULT_TIMEOUT = 30000
 const TUNNEL_IDENTIFIER = 'my-tunnel'
 
 const getSauceConfig = (browserName) => ({
-  'tunnel-identifier': TUNNEL_IDENTIFIER,
+  ...(
+    !IS_GLOBAL_WEBSITE &&
+    { 'tunnel-identifier': TUNNEL_IDENTIFIER }
+  ),
   name: `${packageConfig.name}-${browserName}`,
   build: `local-${Date.now()}`
 })
@@ -61,6 +66,7 @@ const config = {
   },
   multiple: {
     sacue: {
+      chunks: os.cpus() - 1,
       browsers: [
         {
           browser: 'chrome',

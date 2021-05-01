@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "integration-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,8 @@
     "fix:style": "npm run style -- --fix",
     "prettier": "prettier --check '**/*.{json,md,yml,sh}'",
     "fix:prettier": "prettier --write '**/*.{json,md,yml,sh}'",
-    "allfix": "npm-run-all fix:*",
+    "all-lint": "npm-run-all lint style prettier",
+    "all-fix": "npm-run-all fix:*",
     "\n# UNIT TEST SCRIPTS": "",
     "pre-test": "cross-env CI=true",
     "test:base": "npm run pre-test -- react-scripts test --roots=__tests__",
@@ -38,10 +39,11 @@
     "functional:sauce": "cross-env RUNNER=SAUCE node ./scripts/run-with-sc functional -- run-multiple sacue --steps --plugins allure",
     "functional:selenoid": "cross-env RUNNER=SELENOID npm-run-all selenoid:stop selenoid:run 'functional -- run-workers 2 --plugins allure'",
     "functional:report-preview": "allure serve ./output ./output/*",
-    "functional:generate-report": "allure generate ./output -o ./report",
+    "functional:generate-report": "allure generate ./output ./output/* -o ./e2e-reports",
     "\n# CI SCRIPTS": "",
-    "ci-test": "npm run test:report; node ./scripts/lint",
-    "ci-functional": "npm run functional; node ./scripts/functional"
+    "ci-lint": "npm run all-lint > lint.log",
+    "ci-test": "npm run test:report",
+    "ci-functional": "cross-env IS_GLOBAL_WEBSITE=1 npm run functional:sauce"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -55,12 +57,14 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "@wdio/sauce-service": "^7.5.2",
+    "allure-commandline": "^2.13.8",
     "codeceptjs": "^3.0.6",
     "cross-env": "^7.0.3",
     "debug": "^4.3.1",
     "eslint": "^7.24.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
+    "heroku-client": "^3.1.0",
     "husky": "^6.0.0",
     "jest-junit": "^12.0.0",
     "lint-staged": "^10.5.4",
@@ -69,7 +73,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "prettier-plugin-sh": "^0.6.1",
-    "saucelabs": "^4.7.4",
+    "saucelabs": "^4.7.5",
     "source-map-explorer": "^2.5.2",
     "stylelint": "^13.12.0",
     "stylelint-config-standard": "^21.0.0",
@@ -84,7 +88,7 @@
       "stylelint --fix"
     ],
     "**/*.{json,md,yml,sh}": [
-      "prettier --fix"
+      "prettier --write"
     ]
   },
   "jest": {
@@ -92,7 +96,7 @@
       "**/*.test.js"
     ],
     "moduleNameMapper": {
-      "~src/(.*)": "<rootDir>/src/$1"
+      "@/(.*)": "<rootDir>/$1"
     }
   },
   "jest-junit": {

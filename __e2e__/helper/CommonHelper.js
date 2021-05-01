@@ -7,12 +7,12 @@ class CommonHelper extends Helper {
     return codeceptjs.container.plugins('allure')
   }
 
-  _getWebDriver () {
+  _getHelper () {
     return this.helpers.WebDriver
   }
 
   _getBrowser () {
-    return this._getWebDriver().browser
+    return this._getHelper().browser
   }
 
   _getSessionId () {
@@ -26,6 +26,17 @@ class CommonHelper extends Helper {
       isSauce: RUNNER === 'SAUCE'
     }
     return env
+  }
+
+  amOnMySite () {
+    const { HEROKU_APP_URL } = process.env
+    const { isSelenoid } = this.getEnv()
+    const helper = this._getHelper()
+    let url = HEROKU_APP_URL || 'http://localhost:3000'
+    if (isSelenoid) {
+      url = 'http://test.local.com:3000'
+    }
+    helper.amOnPage(url)
   }
 
   log (message, prefix = 'log') {

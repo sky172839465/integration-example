@@ -3,22 +3,25 @@ const { spawn } = require('child_process')
 const _ = require('lodash')
 const SauceLabs = require('saucelabs').default
 const { TUNNEL_IDENTIFIER, config } = require('../codecept.conf')
-const { SAUCE_USERNAME, SAUCE_ACCESS_KEY } = process.env
-
-const sauce = new SauceLabs({
-  user: SAUCE_USERNAME,
-  key: SAUCE_ACCESS_KEY
-})
+const { SAUCE_USERNAME, SAUCE_ACCESS_KEY, IS_GLOBAL_WEBSITE } = process.env
 
 const runWithSC = async () => {
-  const sc = await sauce.startSauceConnect({
-    logger: (stdout) => console.log(`[with-sc] ${stdout}`),
-    tunnelIdentifier: TUNNEL_IDENTIFIER
-  })
-  
-  if (process.argv.length < 3) {
-    console.log('Need some npm script for execute')
-    process.exit(1)
+  const isPrivateWebsite = !IS_GLOBAL_WEBSITE
+  let sc
+  if (isPrivateWebsite) {
+    const sauce = new SauceLabs({
+      user: SAUCE_USERNAME,
+      key: SAUCE_ACCESS_KEY
+    })
+    sc = await sauce.startSauceConnect({
+      logger: (stdout) => console.log(`[with-sc] ${stdout}`),
+      tunnelIdentifier: TUNNEL_IDENTIFIER
+    })
+    
+    if (process.argv.length < 3) {
+      console.log('Need some npm script for execute')
+      process.exit(1)
+    }
   }
   
   const run = spawn(
@@ -26,7 +29,11 @@ const runWithSC = async () => {
     { shell: true, stdio: 'inherit' }
   )
   await new Promise(resolve => run.on('exit', resolve))
-  await sc.close()
+
+  if (isPrivateWebsite) {
+    await sc.close()
+  }
+
   const rootOutputFolder = config.output
   const sauceOuputFolders = _.flow(
     () => readdirSync(rootOutputFolder, { withFileTypes: true }),

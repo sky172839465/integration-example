@@ -10,7 +10,7 @@ class SelenoidHelper extends CommonHelper {
 
     event.dispatcher.on(event.test.passed, () => { 
       const videoName = _.get(
-        this._getWebDriver(),
+        this._getHelper(),
         'options.capabilities["selenoid:options"].videoName'
       )
       const file = `file://${global.output_dir}/video/${videoName}`
