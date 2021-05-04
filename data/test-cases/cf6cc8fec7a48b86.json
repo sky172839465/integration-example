@@ -1,12 +1,12 @@
 {
-  "uid" : "2c79a435bf05a16e",
-  "name" : "test element exist 功能 ? && func",
-  "fullName" : "[firefox] test func:.test element exist 功能 ? && func",
-  "historyId" : "3973640bfa9b367870760f644c291b3e",
+  "uid" : "cf6cc8fec7a48b86",
+  "name" : "yusong blog",
+  "fullName" : "[firefox] test yusong blog:.yusong blog",
+  "historyId" : "f8d18bb941745acc47196e871890c680",
   "time" : {
-    "start" : 1620135623009,
-    "stop" : 1620135639977,
-    "duration" : 16968
+    "start" : 1620137273221,
+    "stop" : 1620137290325,
+    "duration" : 17104
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -17,11 +17,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "I am on page \"https://google.com\"",
+      "name" : "I am on page \"https://yusong.io/\"",
       "time" : {
-        "start" : 1620135637097,
-        "stop" : 1620135638569,
-        "duration" : 1472
+        "start" : 1620137287370,
+        "stop" : 1620137288980,
+        "duration" : 1610
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,9 +34,9 @@
     }, {
       "name" : "I wait 1",
       "time" : {
-        "start" : 1620135638569,
-        "stop" : 1620135639571,
-        "duration" : 1002
+        "start" : 1620137288981,
+        "stop" : 1620137289982,
+        "duration" : 1001
       },
       "status" : "passed",
       "steps" : [ ],
@@ -47,41 +47,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I log 123456",
+      "name" : "I see \"Hi I'm Yusong\", \"h3\"",
       "time" : {
-        "start" : 1620135639571,
-        "stop" : 1620135639571,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ {
-        "name" : "[log] 123456",
-        "time" : {
-          "start" : 1620135639571,
-          "stop" : 1620135639571,
-          "duration" : 0
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "stepsCount" : 0,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : false
-      } ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 1,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : true
-    }, {
-      "name" : "I see element \"[name=\"q\"]\"",
-      "time" : {
-        "start" : 1620135639572,
-        "stop" : 1620135639975,
-        "duration" : 403
+        "start" : 1620137289982,
+        "stop" : 1620137290322,
+        "duration" : 340
       },
       "status" : "passed",
       "steps" : [ ],
@@ -93,14 +63,14 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "a27b7f605b5b1f27",
+      "uid" : "9b282c72d70aae09",
       "name" : "\uD83C\uDFA6 SAUCE LINK",
-      "source" : "a27b7f605b5b1f27.uri",
+      "source" : "9b282c72d70aae09.uri",
       "type" : "text/uri-list",
       "size" : 59
     } ],
     "parameters" : [ ],
-    "stepsCount" : 5,
+    "stepsCount" : 3,
     "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -111,16 +81,16 @@
     "value" : "firefox"
   }, {
     "name" : "suite",
-    "value" : "[firefox] test func:"
+    "value" : "[firefox] test yusong blog:"
   }, {
     "name" : "testClass",
-    "value" : "[firefox] test func:"
+    "value" : "[firefox] test yusong blog:"
   }, {
     "name" : "testMethod",
-    "value" : "test element exist 功能 ? && func"
+    "value" : "yusong blog"
   }, {
     "name" : "package",
-    "value" : "[firefox] test func:"
+    "value" : "[firefox] test yusong blog:"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -135,6 +105,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "2c79a435bf05a16e.json",
+  "source" : "cf6cc8fec7a48b86.json",
   "parameterValues" : [ ]
 }

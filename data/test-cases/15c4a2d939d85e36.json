@@ -1,0 +1,140 @@
+{
+  "uid" : "15c4a2d939d85e36",
+  "name" : "test element exist 功能 ? && func",
+  "fullName" : "[firefox] test func:.test element exist 功能 ? && func",
+  "historyId" : "3973640bfa9b367870760f644c291b3e",
+  "time" : {
+    "start" : 1620137290466,
+    "stop" : 1620137305508,
+    "duration" : 15042
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "I am on page \"https://google.com\"",
+      "time" : {
+        "start" : 1620137302797,
+        "stop" : 1620137304186,
+        "duration" : 1389
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 1",
+      "time" : {
+        "start" : 1620137304186,
+        "stop" : 1620137305188,
+        "duration" : 1002
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I log 123456",
+      "time" : {
+        "start" : 1620137305188,
+        "stop" : 1620137305189,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "[log] 123456",
+        "time" : {
+          "start" : 1620137305189,
+          "stop" : 1620137305189,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I see element \"[name=\"q\"]\"",
+      "time" : {
+        "start" : 1620137305189,
+        "stop" : 1620137305507,
+        "duration" : 318
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "13b1f0ec4b0decd6",
+      "name" : "\uD83C\uDFA6 SAUCE LINK",
+      "source" : "13b1f0ec4b0decd6.uri",
+      "type" : "text/uri-list",
+      "size" : 59
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "browserName",
+    "value" : "firefox"
+  }, {
+    "name" : "suite",
+    "value" : "[firefox] test func:"
+  }, {
+    "name" : "testClass",
+    "value" : "[firefox] test func:"
+  }, {
+    "name" : "testMethod",
+    "value" : "test element exist 功能 ? && func"
+  }, {
+    "name" : "package",
+    "value" : "[firefox] test func:"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "15c4a2d939d85e36.json",
+  "parameterValues" : [ ]
+}
