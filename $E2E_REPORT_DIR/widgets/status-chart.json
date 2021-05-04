@@ -1,0 +1,31 @@
+[ {
+  "uid" : "9883f8e0baf327a",
+  "name" : "test element exist 功能 ? && func",
+  "time" : {
+    "start" : 1620144154481,
+    "stop" : 1620144154725,
+    "duration" : 244
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e19500b15d08f692",
+  "name" : "yusong blog",
+  "time" : {
+    "start" : 1620144154109,
+    "stop" : 1620144154471,
+    "duration" : 362
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ed7a0eb83d05a02e",
+  "name" : "test localhost content",
+  "time" : {
+    "start" : 1620144154730,
+    "stop" : 1620144159626,
+    "duration" : 4896
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

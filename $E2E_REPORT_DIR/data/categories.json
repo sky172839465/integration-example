@@ -1,0 +1,52 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Cannot read property 'url' of undefined",
+      "children" : [ {
+        "name" : "yusong blog",
+        "uid" : "e19500b15d08f692",
+        "parentUid" : "ca431dc36802561db992a7fbe445e73c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1620144154109,
+          "stop" : 1620144154471,
+          "duration" : 362
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test element exist 功能 ? && func",
+        "uid" : "9883f8e0baf327a",
+        "parentUid" : "ca431dc36802561db992a7fbe445e73c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1620144154481,
+          "stop" : 1620144154725,
+          "duration" : 244
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test localhost content",
+        "uid" : "ed7a0eb83d05a02e",
+        "parentUid" : "ca431dc36802561db992a7fbe445e73c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1620144154730,
+          "stop" : 1620144159626,
+          "duration" : 4896
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ca431dc36802561db992a7fbe445e73c"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}
