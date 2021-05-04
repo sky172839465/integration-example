@@ -2,78 +2,39 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "children" : [ {
     "name" : "yusong blog",
-    "uid" : "835d7ab831cee11e",
+    "uid" : "848507dca4e12e26",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
+    "status" : "failed",
     "time" : {
-      "start" : 1620138322386,
-      "stop" : 1620138341611,
-      "duration" : 19225
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "yusong blog",
-    "uid" : "5ed89381d3193e35",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1620138322391,
-      "stop" : 1620138335255,
-      "duration" : 12864
+      "start" : 1620138953522,
+      "stop" : 1620138975783,
+      "duration" : 22261
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
     "name" : "test element exist 功能 ? && func",
-    "uid" : "83773f4b99b786dc",
+    "uid" : "75bde7e268a10a5a",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
+    "status" : "failed",
     "time" : {
-      "start" : 1620138335548,
-      "stop" : 1620138345844,
-      "duration" : 10296
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "test element exist 功能 ? && func",
-    "uid" : "d7686bf70f7c3b07",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1620138341894,
-      "stop" : 1620138359599,
-      "duration" : 17705
+      "start" : 1620138975794,
+      "stop" : 1620138996707,
+      "duration" : 20913
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
     "name" : "test localhost content",
-    "uid" : "1fd19990fd3e0c37",
+    "uid" : "42de0ca32208a233",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
+    "status" : "failed",
     "time" : {
-      "start" : 1620138346006,
-      "stop" : 1620138355024,
-      "duration" : 9018
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "test localhost content",
-    "uid" : "5ef780c2227e6841",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1620138359744,
-      "stop" : 1620138375129,
-      "duration" : 15385
+      "start" : 1620138996711,
+      "stop" : 1620139022243,
+      "duration" : 25532
     },
     "flaky" : false,
     "newFailed" : false,

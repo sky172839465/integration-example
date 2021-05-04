@@ -1,107 +1,56 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "children" : [ {
-    "name" : "[firefox] test yusong blog:",
+    "name" : "[undefined] test yusong blog:",
     "children" : [ {
       "name" : "yusong blog",
-      "uid" : "835d7ab831cee11e",
-      "parentUid" : "8f8d9e7e75b916f53fb4de90b715f9cf",
-      "status" : "passed",
+      "uid" : "848507dca4e12e26",
+      "parentUid" : "c42210195da098503da08f5bfd438dad",
+      "status" : "failed",
       "time" : {
-        "start" : 1620138322386,
-        "stop" : 1620138341611,
-        "duration" : 19225
+        "start" : 1620138953522,
+        "stop" : 1620138975783,
+        "duration" : 22261
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "8f8d9e7e75b916f53fb4de90b715f9cf"
+    "uid" : "c42210195da098503da08f5bfd438dad"
   }, {
-    "name" : "[chrome] test yusong blog:",
-    "children" : [ {
-      "name" : "yusong blog",
-      "uid" : "5ed89381d3193e35",
-      "parentUid" : "041c3008aa3a5b5871db0b3fd6e83941",
-      "status" : "passed",
-      "time" : {
-        "start" : 1620138322391,
-        "stop" : 1620138335255,
-        "duration" : 12864
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "041c3008aa3a5b5871db0b3fd6e83941"
-  }, {
-    "name" : "[chrome] test func:",
+    "name" : "[undefined] test func:",
     "children" : [ {
       "name" : "test element exist 功能 ? && func",
-      "uid" : "83773f4b99b786dc",
-      "parentUid" : "c559368e0641d3553c4d19f54e0ce631",
-      "status" : "passed",
+      "uid" : "75bde7e268a10a5a",
+      "parentUid" : "f1497a95693ecdda288cf5f274ec29d0",
+      "status" : "failed",
       "time" : {
-        "start" : 1620138335548,
-        "stop" : 1620138345844,
-        "duration" : 10296
+        "start" : 1620138975794,
+        "stop" : 1620138996707,
+        "duration" : 20913
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "c559368e0641d3553c4d19f54e0ce631"
+    "uid" : "f1497a95693ecdda288cf5f274ec29d0"
   }, {
-    "name" : "[firefox] test func:",
-    "children" : [ {
-      "name" : "test element exist 功能 ? && func",
-      "uid" : "d7686bf70f7c3b07",
-      "parentUid" : "2b196f27baf9a29270b1b2a73c425e68",
-      "status" : "passed",
-      "time" : {
-        "start" : 1620138341894,
-        "stop" : 1620138359599,
-        "duration" : 17705
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "2b196f27baf9a29270b1b2a73c425e68"
-  }, {
-    "name" : "[chrome] test local:",
+    "name" : "[undefined] test local:",
     "children" : [ {
       "name" : "test localhost content",
-      "uid" : "1fd19990fd3e0c37",
-      "parentUid" : "e839ffad92fbe64f50ef5606c1a8b666",
-      "status" : "passed",
+      "uid" : "42de0ca32208a233",
+      "parentUid" : "1e869a30d33589cdfdcb1e2ada5c1b0f",
+      "status" : "failed",
       "time" : {
-        "start" : 1620138346006,
-        "stop" : 1620138355024,
-        "duration" : 9018
+        "start" : 1620138996711,
+        "stop" : 1620139022243,
+        "duration" : 25532
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "e839ffad92fbe64f50ef5606c1a8b666"
-  }, {
-    "name" : "[firefox] test local:",
-    "children" : [ {
-      "name" : "test localhost content",
-      "uid" : "5ef780c2227e6841",
-      "parentUid" : "84971f99f51fc6a34737abe3da8d0431",
-      "status" : "passed",
-      "time" : {
-        "start" : 1620138359744,
-        "stop" : 1620138375129,
-        "duration" : 15385
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "84971f99f51fc6a34737abe3da8d0431"
+    "uid" : "1e869a30d33589cdfdcb1e2ada5c1b0f"
   } ],
   "name" : "suites"
 }
