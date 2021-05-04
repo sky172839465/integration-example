@@ -1,12 +1,12 @@
 {
-  "uid" : "fe4533d33b78622b",
-  "name" : "test element exist 功能 ? && func",
-  "fullName" : "[undefined] test func:.test element exist 功能 ? && func",
-  "historyId" : "57f43bef66e598e1c8e8691952c52cd6",
+  "uid" : "58b01f2d578a2484",
+  "name" : "yusong blog",
+  "fullName" : "[undefined] test yusong blog:.yusong blog",
+  "historyId" : "1d5f12be55bf6c1fc8e189587754d2f3",
   "time" : {
-    "start" : 1620141581639,
-    "stop" : 1620141603635,
-    "duration" : 21996
+    "start" : 1620141760949,
+    "stop" : 1620141782314,
+    "duration" : 21365
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -21,11 +21,11 @@
     "statusMessage" : "Cannot read property 'url' of undefined",
     "statusTrace" : "TypeError: Cannot read property 'url' of undefined\n                    at WebDriver.amOnPage (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:843:25)\n                    at Step.run (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/step.js:66:47)\n                    at /home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/actor.js:117:23\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
     "steps" : [ {
-      "name" : "I am on page \"https://google.com\"",
+      "name" : "I am on page \"https://yusong.io/\"",
       "time" : {
-        "start" : 1620141603635,
-        "stop" : 1620141603635,
-        "duration" : 0
+        "start" : 1620141782312,
+        "stop" : 1620141782313,
+        "duration" : 1
       },
       "status" : "failed",
       "statusMessage" : "TypeError: Cannot read property 'url' of undefined\n                    at WebDriver.amOnPage (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:843:25)\n                    at Step.run (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/step.js:66:47)\n                    at /home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/actor.js:117:23\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
@@ -47,16 +47,16 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "[undefined] test func:"
+    "value" : "[undefined] test yusong blog:"
   }, {
     "name" : "testClass",
-    "value" : "[undefined] test func:"
+    "value" : "[undefined] test yusong blog:"
   }, {
     "name" : "testMethod",
-    "value" : "test element exist 功能 ? && func"
+    "value" : "yusong blog"
   }, {
     "name" : "package",
-    "value" : "[undefined] test func:"
+    "value" : "[undefined] test yusong blog:"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -69,6 +69,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "fe4533d33b78622b.json",
+  "source" : "58b01f2d578a2484.json",
   "parameterValues" : [ ]
 }
