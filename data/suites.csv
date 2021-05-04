@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Tue May 04 15:09:05 UTC 2021","Tue May 04 15:09:26 UTC 2021","20954","","[undefined] test func:","","[undefined] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""
-"failed","Tue May 04 15:08:44 UTC 2021","Tue May 04 15:09:05 UTC 2021","21133","","[undefined] test yusong blog:","","[undefined] test yusong blog:","yusong blog","yusong blog",""
-"failed","Tue May 04 15:09:27 UTC 2021","Tue May 04 15:09:54 UTC 2021","27325","","[undefined] test local:","","[undefined] test local:","test localhost content","test localhost content",""
+"failed","Tue May 04 15:13:16 UTC 2021","Tue May 04 15:13:43 UTC 2021","26844","","[undefined] test local:","","[undefined] test local:","test localhost content","test localhost content",""
+"failed","Tue May 04 15:12:55 UTC 2021","Tue May 04 15:13:16 UTC 2021","20928","","[undefined] test func:","","[undefined] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""
+"failed","Tue May 04 15:12:32 UTC 2021","Tue May 04 15:12:54 UTC 2021","22178","","[undefined] test yusong blog:","","[undefined] test yusong blog:","yusong blog","yusong blog",""
