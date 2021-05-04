@@ -1,0 +1,125 @@
+{
+  "uid" : "da80aec3215be302",
+  "name" : "test localhost content",
+  "fullName" : "[firefox] test local:.test localhost content",
+  "historyId" : "9dca88b96f5b9275d5c4123202768327",
+  "time" : {
+    "start" : 1620135640142,
+    "stop" : 1620135660769,
+    "duration" : 20627
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Element \"a.App-link\" was not found by text|CSS|XPath",
+  "statusTrace" : "Error: Element \"a.App-link\" was not found by text|CSS|XPath\n                    at new ElementNotFound (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)\n                    at assertElementExists (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:2770:11)\n                    at WebDriver.proceedSee (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:2548:3)\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Element \"a.App-link\" was not found by text|CSS|XPath",
+    "statusTrace" : "Error: Element \"a.App-link\" was not found by text|CSS|XPath\n                    at new ElementNotFound (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)\n                    at assertElementExists (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:2770:11)\n                    at WebDriver.proceedSee (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:2548:3)\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
+    "steps" : [ {
+      "name" : "I am on my site ",
+      "time" : {
+        "start" : 1620135652597,
+        "stop" : 1620135652598,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 1",
+      "time" : {
+        "start" : 1620135652598,
+        "stop" : 1620135653599,
+        "duration" : 1001
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"Learn React\", \"a.App-link\"",
+      "time" : {
+        "start" : 1620135653599,
+        "stop" : 1620135660769,
+        "duration" : 7170
+      },
+      "status" : "failed",
+      "statusMessage" : "Error: Element \"a.App-link\" was not found by text|CSS|XPath\n                    at new ElementNotFound (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)\n                    at assertElementExists (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:2770:11)\n                    at WebDriver.proceedSee (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:2548:3)\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "a564a1d43c35f2e3",
+      "name" : "Last Seen Screenshot",
+      "source" : "a564a1d43c35f2e3.png",
+      "type" : "image/png",
+      "size" : 5489
+    }, {
+      "uid" : "73d2449f71323ff6",
+      "name" : "\uD83C\uDFA6 SAUCE LINK",
+      "source" : "73d2449f71323ff6.uri",
+      "type" : "text/uri-list",
+      "size" : 59
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "browserName",
+    "value" : "firefox"
+  }, {
+    "name" : "suite",
+    "value" : "[firefox] test local:"
+  }, {
+    "name" : "testClass",
+    "value" : "[firefox] test local:"
+  }, {
+    "name" : "testMethod",
+    "value" : "test localhost content"
+  }, {
+    "name" : "package",
+    "value" : "[firefox] test local:"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "da80aec3215be302.json",
+  "parameterValues" : [ ]
+}

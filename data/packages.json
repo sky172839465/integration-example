@@ -1,0 +1,107 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "[chrome] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "81f72bce0c1cc176",
+      "parentUid" : "8e08712f944fe79cdaa45b9923708b8d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620135605793,
+        "stop" : 1620135648685,
+        "duration" : 42892
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "8e08712f944fe79cdaa45b9923708b8d"
+  }, {
+    "name" : "[firefox] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "a76480eadebfdb6d",
+      "parentUid" : "1cd5f7f74ee5b9bf1a63c47c0f68e193",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620135605810,
+        "stop" : 1620135622819,
+        "duration" : 17009
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1cd5f7f74ee5b9bf1a63c47c0f68e193"
+  }, {
+    "name" : "[firefox] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "2c79a435bf05a16e",
+      "parentUid" : "7e7bef503817760577a3d05c56ae5c91",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620135623009,
+        "stop" : 1620135639977,
+        "duration" : 16968
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7e7bef503817760577a3d05c56ae5c91"
+  }, {
+    "name" : "[firefox] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "da80aec3215be302",
+      "parentUid" : "2ddbe1e9a6a325c598cc339071dc8e90",
+      "status" : "failed",
+      "time" : {
+        "start" : 1620135640142,
+        "stop" : 1620135660769,
+        "duration" : 20627
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2ddbe1e9a6a325c598cc339071dc8e90"
+  }, {
+    "name" : "[chrome] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "aae5e5ed1b647bb6",
+      "parentUid" : "ee786577ff978e4dc2af17b30cca560b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620135648854,
+        "stop" : 1620135659437,
+        "duration" : 10583
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ee786577ff978e4dc2af17b30cca560b"
+  }, {
+    "name" : "[chrome] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "14655b9f01b6dcf9",
+      "parentUid" : "e6bb19e858c1c19af88fc99da63c4b8a",
+      "status" : "failed",
+      "time" : {
+        "start" : 1620135659649,
+        "stop" : 1620135674446,
+        "duration" : 14797
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e6bb19e858c1c19af88fc99da63c4b8a"
+  } ],
+  "name" : "packages"
+}
