@@ -6,25 +6,25 @@
       "name" : "Cannot read property 'url' of undefined",
       "children" : [ {
         "name" : "yusong blog",
-        "uid" : "848507dca4e12e26",
+        "uid" : "7c8e7b1d43ad7513",
         "parentUid" : "ca431dc36802561db992a7fbe445e73c",
         "status" : "failed",
         "time" : {
-          "start" : 1620138953522,
-          "stop" : 1620138975783,
-          "duration" : 22261
+          "start" : 1620140257331,
+          "stop" : 1620140278638,
+          "duration" : 21307
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "test element exist 功能 ? && func",
-        "uid" : "75bde7e268a10a5a",
+        "uid" : "f5baa0cd43c80880",
         "parentUid" : "ca431dc36802561db992a7fbe445e73c",
         "status" : "failed",
         "time" : {
-          "start" : 1620138975794,
-          "stop" : 1620138996707,
+          "start" : 1620140278648,
+          "stop" : 1620140299561,
           "duration" : 20913
         },
         "flaky" : false,
@@ -32,13 +32,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test localhost content",
-        "uid" : "42de0ca32208a233",
+        "uid" : "b557c94c86081ade",
         "parentUid" : "ca431dc36802561db992a7fbe445e73c",
         "status" : "failed",
         "time" : {
-          "start" : 1620138996711,
-          "stop" : 1620139022243,
-          "duration" : 25532
+          "start" : 1620140299909,
+          "stop" : 1620140325458,
+          "duration" : 25549
         },
         "flaky" : false,
         "newFailed" : false,

@@ -1,12 +1,12 @@
 {
-  "uid" : "f85cc319f2c1ed47",
+  "uid" : "64b6946db0391730",
   "name" : "test element exist 功能 ? && func",
   "fullName" : "[undefined] test func:.test element exist 功能 ? && func",
   "historyId" : "57f43bef66e598e1c8e8691952c52cd6",
   "time" : {
-    "start" : 1620138974587,
-    "stop" : 1620138995949,
-    "duration" : 21362
+    "start" : 1620140278468,
+    "stop" : 1620140299906,
+    "duration" : 21438
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -23,9 +23,9 @@
     "steps" : [ {
       "name" : "I am on page \"https://google.com\"",
       "time" : {
-        "start" : 1620138995948,
-        "stop" : 1620138995949,
-        "duration" : 1
+        "start" : 1620140299906,
+        "stop" : 1620140299906,
+        "duration" : 0
       },
       "status" : "failed",
       "statusMessage" : "TypeError: Cannot read property 'url' of undefined\n                    at WebDriver.amOnPage (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:843:25)\n                    at Step.run (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/step.js:66:47)\n                    at /home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/actor.js:117:23\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
@@ -69,6 +69,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "f85cc319f2c1ed47.json",
+  "source" : "64b6946db0391730.json",
   "parameterValues" : [ ]
 }
