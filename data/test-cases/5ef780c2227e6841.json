@@ -1,0 +1,110 @@
+{
+  "uid" : "5ef780c2227e6841",
+  "name" : "test localhost content",
+  "fullName" : "[firefox] test local:.test localhost content",
+  "historyId" : "9dca88b96f5b9275d5c4123202768327",
+  "time" : {
+    "start" : 1620138359744,
+    "stop" : 1620138375129,
+    "duration" : 15385
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "I am on my site ",
+      "time" : {
+        "start" : 1620138373219,
+        "stop" : 1620138373221,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 1",
+      "time" : {
+        "start" : 1620138373221,
+        "stop" : 1620138374223,
+        "duration" : 1002
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"Learn React\", \"a.App-link\"",
+      "time" : {
+        "start" : 1620138374223,
+        "stop" : 1620138375128,
+        "duration" : 905
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "2b6f940bc65cec53",
+      "name" : "\uD83C\uDFA6 SAUCE LINK",
+      "source" : "2b6f940bc65cec53.uri",
+      "type" : "text/uri-list",
+      "size" : 59
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "browserName",
+    "value" : "firefox"
+  }, {
+    "name" : "suite",
+    "value" : "[firefox] test local:"
+  }, {
+    "name" : "testClass",
+    "value" : "[firefox] test local:"
+  }, {
+    "name" : "testMethod",
+    "value" : "test localhost content"
+  }, {
+    "name" : "package",
+    "value" : "[firefox] test local:"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5ef780c2227e6841.json",
+  "parameterValues" : [ ]
+}

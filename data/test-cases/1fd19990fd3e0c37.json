@@ -1,12 +1,12 @@
 {
-  "uid" : "b945d4b3f7514e9b",
-  "name" : "yusong blog",
-  "fullName" : "[chrome] test yusong blog:.yusong blog",
-  "historyId" : "3682f2680c6033b98dfcc3b336b3de7c",
+  "uid" : "1fd19990fd3e0c37",
+  "name" : "test localhost content",
+  "fullName" : "[chrome] test local:.test localhost content",
+  "historyId" : "60fc957a34c291e19621d5005edd10a",
   "time" : {
-    "start" : 1620137273224,
-    "stop" : 1620137283194,
-    "duration" : 9970
+    "start" : 1620138346006,
+    "stop" : 1620138355024,
+    "duration" : 9018
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -17,11 +17,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "I am on page \"https://yusong.io/\"",
+      "name" : "I am on my site ",
       "time" : {
-        "start" : 1620137280805,
-        "stop" : 1620137281892,
-        "duration" : 1087
+        "start" : 1620138352911,
+        "stop" : 1620138352912,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,8 +34,8 @@
     }, {
       "name" : "I wait 1",
       "time" : {
-        "start" : 1620137281892,
-        "stop" : 1620137282894,
+        "start" : 1620138352912,
+        "stop" : 1620138353914,
         "duration" : 1002
       },
       "status" : "passed",
@@ -47,11 +47,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see \"Hi I'm Yusong\", \"h3\"",
+      "name" : "I see \"Learn React\", \"a.App-link\"",
       "time" : {
-        "start" : 1620137282894,
-        "stop" : 1620137283191,
-        "duration" : 297
+        "start" : 1620138353914,
+        "stop" : 1620138355023,
+        "duration" : 1109
       },
       "status" : "passed",
       "steps" : [ ],
@@ -63,9 +63,9 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "41d2e6552cb507df",
+      "uid" : "15128e5ce87d28db",
       "name" : "\uD83C\uDFA6 SAUCE LINK",
-      "source" : "41d2e6552cb507df.uri",
+      "source" : "15128e5ce87d28db.uri",
       "type" : "text/uri-list",
       "size" : 59
     } ],
@@ -81,16 +81,16 @@
     "value" : "chrome"
   }, {
     "name" : "suite",
-    "value" : "[chrome] test yusong blog:"
+    "value" : "[chrome] test local:"
   }, {
     "name" : "testClass",
-    "value" : "[chrome] test yusong blog:"
+    "value" : "[chrome] test local:"
   }, {
     "name" : "testMethod",
-    "value" : "yusong blog"
+    "value" : "test localhost content"
   }, {
     "name" : "package",
-    "value" : "[chrome] test yusong blog:"
+    "value" : "[chrome] test local:"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -105,6 +105,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b945d4b3f7514e9b.json",
+  "source" : "1fd19990fd3e0c37.json",
   "parameterValues" : [ ]
 }
