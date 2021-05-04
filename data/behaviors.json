@@ -1,44 +1,44 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
   "children" : [ {
     "name" : "yusong blog",
-    "uid" : "373f6adf9b7383d9",
+    "uid" : "a7d17c9885dbae50",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "failed",
     "time" : {
-      "start" : 1620141152819,
-      "stop" : 1620141174997,
-      "duration" : 22178
+      "start" : 1620141560561,
+      "stop" : 1620141582351,
+      "duration" : 21790
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
     "name" : "test element exist 功能 ? && func",
-    "uid" : "a13945f4831eb0d3",
+    "uid" : "61c07c8aa08aca3c",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "failed",
     "time" : {
-      "start" : 1620141175450,
-      "stop" : 1620141196378,
-      "duration" : 20928
+      "start" : 1620141582363,
+      "stop" : 1620141603643,
+      "duration" : 21280
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
     "name" : "test localhost content",
-    "uid" : "5fe02314b46098f8",
+    "uid" : "4437aa8ee52360f6",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "failed",
     "time" : {
-      "start" : 1620141196381,
-      "stop" : 1620141223225,
-      "duration" : 26844
+      "start" : 1620141603646,
+      "stop" : 1620141629644,
+      "duration" : 25998
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
-  } ],
-  "name" : "behaviors"
+  } ]
 }

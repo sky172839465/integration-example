@@ -1,12 +1,12 @@
 {
-  "uid" : "d63cc222eef4d00d",
+  "uid" : "61c07c8aa08aca3c",
   "name" : "test element exist 功能 ? && func",
   "fullName" : "[undefined] test func:.test element exist 功能 ? && func",
   "historyId" : "57f43bef66e598e1c8e8691952c52cd6",
   "time" : {
-    "start" : 1620141175007,
-    "stop" : 1620141195963,
-    "duration" : 20956
+    "start" : 1620141582363,
+    "stop" : 1620141603643,
+    "duration" : 21280
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -23,9 +23,9 @@
     "steps" : [ {
       "name" : "I am on page \"https://google.com\"",
       "time" : {
-        "start" : 1620141195962,
-        "stop" : 1620141195963,
-        "duration" : 1
+        "start" : 1620141603643,
+        "stop" : 1620141603643,
+        "duration" : 0
       },
       "status" : "failed",
       "statusMessage" : "TypeError: Cannot read property 'url' of undefined\n                    at WebDriver.amOnPage (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/helper/WebDriver.js:843:25)\n                    at Step.run (/home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/step.js:66:47)\n                    at /home/runner/work/integration-example/integration-example/node_modules/codeceptjs/lib/actor.js:117:23\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
@@ -63,12 +63,27 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : true,
-  "retry" : true,
+  "hidden" : false,
+  "retry" : false,
   "extra" : {
-    "categories" : [ ],
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "fe4533d33b78622b",
+      "status" : "failed",
+      "statusDetails" : "Cannot read property 'url' of undefined",
+      "time" : {
+        "start" : 1620141581639,
+        "stop" : 1620141603635,
+        "duration" : 21996
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
     "tags" : [ ]
   },
-  "source" : "d63cc222eef4d00d.json",
+  "source" : "61c07c8aa08aca3c.json",
   "parameterValues" : [ ]
 }
