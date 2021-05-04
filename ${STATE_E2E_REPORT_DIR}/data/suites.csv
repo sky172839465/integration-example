@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Tue May 04 16:44:05 UTC 2021","Tue May 04 16:44:06 UTC 2021","434","","[undefined] test yusong blog:","","[undefined] test yusong blog:","yusong blog","yusong blog",""
+"failed","Tue May 04 16:44:06 UTC 2021","Tue May 04 16:44:06 UTC 2021","235","","[undefined] test func:","","[undefined] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""
+"failed","Tue May 04 16:44:06 UTC 2021","Tue May 04 16:44:11 UTC 2021","4886","","[undefined] test local:","","[undefined] test local:","test localhost content","test localhost content",""
