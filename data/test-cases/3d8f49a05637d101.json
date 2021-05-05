@@ -1,0 +1,140 @@
+{
+  "uid" : "3d8f49a05637d101",
+  "name" : "test element exist 功能 ? && func",
+  "fullName" : "[chrome] test func:.test element exist 功能 ? && func",
+  "historyId" : "54f7ffb4ac033dd0645e589d216d2aea",
+  "time" : {
+    "start" : 1620222770485,
+    "stop" : 1620222780555,
+    "duration" : 10070
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "I am on page \"https://google.com\"",
+      "time" : {
+        "start" : 1620222777774,
+        "stop" : 1620222779298,
+        "duration" : 1524
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 1",
+      "time" : {
+        "start" : 1620222779299,
+        "stop" : 1620222780300,
+        "duration" : 1001
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I log 123456",
+      "time" : {
+        "start" : 1620222780300,
+        "stop" : 1620222780301,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "[log] 123456",
+        "time" : {
+          "start" : 1620222780301,
+          "stop" : 1620222780301,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I see element \"[name=\"q\"]\"",
+      "time" : {
+        "start" : 1620222780301,
+        "stop" : 1620222780553,
+        "duration" : 252
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "c4a532d1469340dc",
+      "name" : "\uD83C\uDFA6 SAUCE LINK",
+      "source" : "c4a532d1469340dc.uri",
+      "type" : "text/uri-list",
+      "size" : 59
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "browserName",
+    "value" : "chrome"
+  }, {
+    "name" : "suite",
+    "value" : "[chrome] test func:"
+  }, {
+    "name" : "testClass",
+    "value" : "[chrome] test func:"
+  }, {
+    "name" : "testMethod",
+    "value" : "test element exist 功能 ? && func"
+  }, {
+    "name" : "package",
+    "value" : "[chrome] test func:"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3d8f49a05637d101.json",
+  "parameterValues" : [ ]
+}

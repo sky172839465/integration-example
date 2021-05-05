@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed May 05 13:52:39 UTC 2021","Wed May 05 13:52:56 UTC 2021","17599","","[firefox] test yusong blog:","","[firefox] test yusong blog:","yusong blog","yusong blog",""
+"passed","Wed May 05 13:52:56 UTC 2021","Wed May 05 13:53:45 UTC 2021","48925","","[firefox] test func:","","[firefox] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""
+"passed","Wed May 05 13:53:45 UTC 2021","Wed May 05 13:54:34 UTC 2021","48213","","[firefox] test local:","","[firefox] test local:","test localhost content","test localhost content",""
+"passed","Wed May 05 13:53:00 UTC 2021","Wed May 05 13:53:10 UTC 2021","9924","","[chrome] test local:","","[chrome] test local:","test localhost content","test localhost content",""
+"passed","Wed May 05 13:52:39 UTC 2021","Wed May 05 13:52:50 UTC 2021","11062","","[chrome] test yusong blog:","","[chrome] test yusong blog:","yusong blog","yusong blog",""
+"passed","Wed May 05 13:52:50 UTC 2021","Wed May 05 13:53:00 UTC 2021","10070","","[chrome] test func:","","[chrome] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""

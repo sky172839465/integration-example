@@ -1,0 +1,107 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "[chrome] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "6021317c1399c125",
+      "parentUid" : "8e08712f944fe79cdaa45b9923708b8d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620222759035,
+        "stop" : 1620222770097,
+        "duration" : 11062
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "8e08712f944fe79cdaa45b9923708b8d"
+  }, {
+    "name" : "[firefox] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "c2aec6c482d7bb1d",
+      "parentUid" : "1cd5f7f74ee5b9bf1a63c47c0f68e193",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620222759037,
+        "stop" : 1620222776636,
+        "duration" : 17599
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1cd5f7f74ee5b9bf1a63c47c0f68e193"
+  }, {
+    "name" : "[chrome] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "3d8f49a05637d101",
+      "parentUid" : "ee786577ff978e4dc2af17b30cca560b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620222770485,
+        "stop" : 1620222780555,
+        "duration" : 10070
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ee786577ff978e4dc2af17b30cca560b"
+  }, {
+    "name" : "[firefox] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "56e86e7abe933827",
+      "parentUid" : "7e7bef503817760577a3d05c56ae5c91",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620222776847,
+        "stop" : 1620222825772,
+        "duration" : 48925
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7e7bef503817760577a3d05c56ae5c91"
+  }, {
+    "name" : "[chrome] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "e8cbc5ee8c483c19",
+      "parentUid" : "e6bb19e858c1c19af88fc99da63c4b8a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620222780791,
+        "stop" : 1620222790715,
+        "duration" : 9924
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e6bb19e858c1c19af88fc99da63c4b8a"
+  }, {
+    "name" : "[firefox] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "ea7daad2ecab668",
+      "parentUid" : "2ddbe1e9a6a325c598cc339071dc8e90",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620222825909,
+        "stop" : 1620222874122,
+        "duration" : 48213
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2ddbe1e9a6a325c598cc339071dc8e90"
+  } ],
+  "name" : "packages"
+}
