@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Element \"a.App-link\" was not found by text|CSS|XPath",
+      "children" : [ {
+        "name" : "test localhost content",
+        "uid" : "87a74af767636c91",
+        "parentUid" : "2766545ed33fd7ac932436701c436986",
+        "status" : "failed",
+        "time" : {
+          "start" : 1620225577387,
+          "stop" : 1620225588772,
+          "duration" : 11385
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test localhost content",
+        "uid" : "4d96165e4de5bfaf",
+        "parentUid" : "2766545ed33fd7ac932436701c436986",
+        "status" : "failed",
+        "time" : {
+          "start" : 1620225577499,
+          "stop" : 1620225598683,
+          "duration" : 21184
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2766545ed33fd7ac932436701c436986"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

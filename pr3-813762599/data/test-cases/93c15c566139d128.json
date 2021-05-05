@@ -1,0 +1,110 @@
+{
+  "uid" : "93c15c566139d128",
+  "name" : "yusong blog",
+  "fullName" : "[firefox] test yusong blog:.yusong blog",
+  "historyId" : "f8d18bb941745acc47196e871890c680",
+  "time" : {
+    "start" : 1620225577423,
+    "stop" : 1620225594376,
+    "duration" : 16953
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "I am on page \"https://yusong.io/\"",
+      "time" : {
+        "start" : 1620225591353,
+        "stop" : 1620225592875,
+        "duration" : 1522
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 1",
+      "time" : {
+        "start" : 1620225592875,
+        "stop" : 1620225593876,
+        "duration" : 1001
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"Hi I'm Yusong\", \"h3\"",
+      "time" : {
+        "start" : 1620225593876,
+        "stop" : 1620225594373,
+        "duration" : 497
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "43eac5ae9aa09833",
+      "name" : "\uD83C\uDFA6 SAUCE LINK",
+      "source" : "43eac5ae9aa09833.uri",
+      "type" : "text/uri-list",
+      "size" : 59
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "browserName",
+    "value" : "firefox"
+  }, {
+    "name" : "suite",
+    "value" : "[firefox] test yusong blog:"
+  }, {
+    "name" : "testClass",
+    "value" : "[firefox] test yusong blog:"
+  }, {
+    "name" : "testMethod",
+    "value" : "yusong blog"
+  }, {
+    "name" : "package",
+    "value" : "[firefox] test yusong blog:"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "93c15c566139d128.json",
+  "parameterValues" : [ ]
+}

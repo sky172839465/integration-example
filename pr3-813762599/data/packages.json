@@ -1,0 +1,107 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "[chrome] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "87a74af767636c91",
+      "parentUid" : "e6bb19e858c1c19af88fc99da63c4b8a",
+      "status" : "failed",
+      "time" : {
+        "start" : 1620225577387,
+        "stop" : 1620225588772,
+        "duration" : 11385
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e6bb19e858c1c19af88fc99da63c4b8a"
+  }, {
+    "name" : "[firefox] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "93c15c566139d128",
+      "parentUid" : "1cd5f7f74ee5b9bf1a63c47c0f68e193",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620225577423,
+        "stop" : 1620225594376,
+        "duration" : 16953
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1cd5f7f74ee5b9bf1a63c47c0f68e193"
+  }, {
+    "name" : "[chrome] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "1f61294e09818e29",
+      "parentUid" : "8e08712f944fe79cdaa45b9923708b8d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620225577481,
+        "stop" : 1620225585936,
+        "duration" : 8455
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "8e08712f944fe79cdaa45b9923708b8d"
+  }, {
+    "name" : "[firefox] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "4d96165e4de5bfaf",
+      "parentUid" : "2ddbe1e9a6a325c598cc339071dc8e90",
+      "status" : "failed",
+      "time" : {
+        "start" : 1620225577499,
+        "stop" : 1620225598683,
+        "duration" : 21184
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2ddbe1e9a6a325c598cc339071dc8e90"
+  }, {
+    "name" : "[chrome] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "7f60e838eb21f2cf",
+      "parentUid" : "ee786577ff978e4dc2af17b30cca560b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620225586489,
+        "stop" : 1620225593308,
+        "duration" : 6819
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ee786577ff978e4dc2af17b30cca560b"
+  }, {
+    "name" : "[firefox] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "513209f7fe05e9a6",
+      "parentUid" : "7e7bef503817760577a3d05c56ae5c91",
+      "status" : "passed",
+      "time" : {
+        "start" : 1620225594552,
+        "stop" : 1620225609829,
+        "duration" : 15277
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7e7bef503817760577a3d05c56ae5c91"
+  } ],
+  "name" : "packages"
+}
