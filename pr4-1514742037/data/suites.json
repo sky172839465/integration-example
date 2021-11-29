@@ -1,0 +1,107 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "[chrome] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "d4149ee53ceb7a1e",
+      "parentUid" : "041c3008aa3a5b5871db0b3fd6e83941",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638167698175,
+        "stop" : 1638167716557,
+        "duration" : 18382
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "041c3008aa3a5b5871db0b3fd6e83941"
+  }, {
+    "name" : "[firefox] test yusong blog:",
+    "children" : [ {
+      "name" : "yusong blog",
+      "uid" : "a8ac1a5ebe5749a6",
+      "parentUid" : "8f8d9e7e75b916f53fb4de90b715f9cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638167698191,
+        "stop" : 1638167716340,
+        "duration" : 18149
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "8f8d9e7e75b916f53fb4de90b715f9cf"
+  }, {
+    "name" : "[chrome] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "df4d86b1b2328017",
+      "parentUid" : "e839ffad92fbe64f50ef5606c1a8b666",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638167698219,
+        "stop" : 1638167723038,
+        "duration" : 24819
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e839ffad92fbe64f50ef5606c1a8b666"
+  }, {
+    "name" : "[firefox] test local:",
+    "children" : [ {
+      "name" : "test localhost content",
+      "uid" : "cd3094dcd163bf24",
+      "parentUid" : "84971f99f51fc6a34737abe3da8d0431",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638167698244,
+        "stop" : 1638167723505,
+        "duration" : 25261
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "84971f99f51fc6a34737abe3da8d0431"
+  }, {
+    "name" : "[firefox] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "a49bd3f9a276dcea",
+      "parentUid" : "2b196f27baf9a29270b1b2a73c425e68",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638167716480,
+        "stop" : 1638167734699,
+        "duration" : 18219
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2b196f27baf9a29270b1b2a73c425e68"
+  }, {
+    "name" : "[chrome] test func:",
+    "children" : [ {
+      "name" : "test element exist 功能 ? && func",
+      "uid" : "e2d36abdf2936702",
+      "parentUid" : "c559368e0641d3553c4d19f54e0ce631",
+      "status" : "passed",
+      "time" : {
+        "start" : 1638167716804,
+        "stop" : 1638167731371,
+        "duration" : 14567
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c559368e0641d3553c4d19f54e0ce631"
+  } ],
+  "name" : "suites"
+}
