@@ -2,18 +2,26 @@ name: main
 on:
   pull_request:
     branches: ["**"]
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 jobs:
-  deploy_heroku:
-    name: Deploly heroku review app
+  deploy_flyio:
+    name: Deploly fly.io review app
     runs-on: ubuntu-latest
+    # Only run one deployment at a time per PR.
+    concurrency:
+      group: pr-${{ github.event.number }}
+      cancel-in-progress: true
+    # Create a GitHub deployment environment per staging app so it shows up
+    # in the pull request UI.
     env:
-      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      HEROKU_API_TOKEN: ${{secrets.HEROKU_API_TOKEN}}
-      HEROKU_PIPELINE_ID: ${{secrets.HEROKU_PIPELINE_ID}}
+      name: pr-${{ github.event.number }}
+      url: ${{ steps.deploy.outputs.url }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Deploy heroku review app
-        uses: mheap/github-action-pr-heroku-review-app@master
+      - uses: actions/checkout@v4
+      - name: Deploy
+        id: deploy
+        uses: superfly/fly-pr-review-apps@1.0.0
   static_and_unit_test:
     name: Static test and unit test
     runs-on: ubuntu-latest
@@ -61,14 +69,6 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-      - name: Get heroku review app
-        id: heroku_app_info
-        uses: actions/github-script@v4
-        with:
-          script: |
-            const { getHerokuReviewApp } = require('./scripts/heroku-helper')
-            const reviewApp = await getHerokuReviewApp({ context })
-            core.exportVariable('HEROKU_APP_URL', reviewApp)
       - name: Run functional test on saucelabs
         run: |
           echo HEROKU_APP_URL=${{env.HEROKU_APP_URL}}
