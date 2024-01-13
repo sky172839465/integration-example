@@ -23,7 +23,6 @@
     "eslint": "^7.24.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
-    "heroku-client": "^3.1.0",
     "husky": "^6.0.0",
     "jest-junit": "^12.0.0",
     "lint-staged": "^10.5.4",
