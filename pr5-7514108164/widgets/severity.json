@@ -1,0 +1,1 @@
+[{"uid":"8b62800604886886","name":"test element exist 功能 ? && func","time":{"start":1705170063971,"stop":1705170071779,"duration":7808},"status":"passed","severity":"normal"},{"uid":"54857a8bbe0df958","name":"test localhost content","time":{"start":1705170072106,"stop":1705170080577,"duration":8471},"status":"failed","severity":"normal"}]
