@@ -79,7 +79,7 @@ const getFuncStatus = async () => {
   return `${status} ${passedTests} passed, ${failedTests} failed, ${totalTests} total tests.`
 }
 
-const getComment = async ({ context = {} }) => {
+const getComment = async ({ context = {} }, flyUrl) => {
   const repo = _.get(context, 'payload.repository.html_url')
   const runId = _.get(context, 'runId')
   const buildUrl = `${repo}/actions/runs/${runId}`
@@ -97,6 +97,7 @@ const getComment = async ({ context = {} }) => {
   - Lint test: ${lintStatus}
   - Unit test: ${unitStatus}
   - Functional test: ${funcStatus}
+  - Functional test url: ${flyUrl}
   - Functional report: ${functionalTestReport}
   - Full build result: ${buildUrl}
 
