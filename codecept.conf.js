@@ -73,13 +73,6 @@ const config = {
             platform: 'Windows 10',
             ...getSauceConfig('Windows Chrome')
           }
-        },
-        {
-          browser: 'firefox',
-          desiredCapabilities: {
-            platform: 'Windows 10',
-            ...getSauceConfig('Windows Firefox')
-          }
         }
       ]
     }
@@ -97,7 +90,8 @@ const config = {
       enabled: true
     },
     allure: {
-      enabled: true
+      enabled: true,
+      require: '@codeceptjs/allure-legacy'
     },
     ...(
       RUN_WITH_SELENOID &&

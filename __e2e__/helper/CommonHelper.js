@@ -36,6 +36,7 @@ class CommonHelper extends Helper {
     if (isSelenoid) {
       url = 'http://test.local.com:3000'
     }
+    console.log('url', url)
     helper.amOnPage(url)
   }
 

@@ -14,7 +14,7 @@ const MESSAGE = {
   LINT_FAILED: 'Lint check get some error.'
 }
 
-const readFileIfExist =  (filePath) => {
+const readFileIfExist =  (filePath = '') => {
   const isFileExist = fs.existsSync(filePath)
   if (!isFileExist) {
     const folderPath = path.parse(filePath).dir
