@@ -41,7 +41,7 @@
   },
   "scripts": {
     "start": "REACT_APP_VERSION=$(npm pkg get version) react-scripts start",
-    "build": "react-scripts build",
+    "build": "REACT_APP_VERSION=$(npm pkg get version) react-scripts build",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "\n# OUTPUT CLEAN": "",
