@@ -193,7 +193,6 @@ jobs:
           msg: ${{ env.BUILD_COMMENT }}
           check_for_duplicate_msg: true
           delete_prev_regex_msg: "Build Result"
-          duplicate_msg_pattern: "Build Result"
 
       - name: Last check build status
         if: ${{ always() }}
