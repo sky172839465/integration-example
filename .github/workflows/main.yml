@@ -93,8 +93,8 @@ jobs:
 
       - uses: actions/setup-java@v2
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: "temurin"
+          java-version: "17"
 
       - name: Cache node_modules
         id: cache-node-modules
