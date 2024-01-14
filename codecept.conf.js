@@ -73,6 +73,13 @@ const config = {
             platform: 'Windows 10',
             ...getSauceConfig('Windows Chrome')
           }
+        },
+        {
+          browser: 'chrome',
+          desiredCapabilities: {
+            platform: 'macOS 13',
+            ...getSauceConfig('macOS 13 Chrome')
+          }
         }
       ]
     }
