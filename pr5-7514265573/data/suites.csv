@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sat Jan 13 18:56:04 UTC 2024","Sat Jan 13 18:56:24 UTC 2024","20118","","[chrome] test local:","","[chrome] test local:","test localhost content","test localhost content",""
-"passed","Sat Jan 13 18:55:56 UTC 2024","Sat Jan 13 18:56:04 UTC 2024","8078","","[chrome] test func:","","[chrome] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""
