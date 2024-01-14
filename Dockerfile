@@ -1,36 +1,25 @@
-# syntax = docker/dockerfile:1
+# https://github.com/fly-apps/hello-create-react-app/blob/main/Dockerfile
 
 # Adjust NODE_VERSION as desired
 ARG NODE_VERSION=18.15.0
-FROM node:${NODE_VERSION}-slim as base
+FROM node:${NODE_VERSION}-slim as build
 
-LABEL fly_launch_runtime="Node.js"
-
-# Node.js app lives here
-WORKDIR /app
+WORKDIR /react-app
+COPY package*.json .
 
 # Set production environment
 ENV NODE_ENV="production"
-
-# Throw-away build stage to reduce size of final image
-FROM base as build
-
-# Install packages needed to build node modules
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
-
-# Install node modules
-COPY --link package-lock.json package.json ./
 
 RUN npm pkg delete scripts.prepare
 RUN npm ci
 
 # Copy application code
-COPY --link . .
+COPY . .
 
 # Build application
 RUN npm run build
 
-FROM pierrezemb/gostatic
-# Copy built application
-COPY --from=build /app /srv/http/
+# server
+FROM nginx:1.19
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /react-app/build /usr/share/nginx/html
