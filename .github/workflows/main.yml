@@ -104,6 +104,9 @@ jobs:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Run functional test on saucelabs
         env:
           FLY_IO_URL: ${{needs.deploy_flyio.outputs.FLY_IO_URL}}
