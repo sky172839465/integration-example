@@ -71,12 +71,12 @@ jobs:
       - name: Unit test
         run: npm run ci-test
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v3
         with:
           name: lint-output
           path: lint.log
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v3
         with:
           name: unit-test-output
           path: ./reports
@@ -113,7 +113,7 @@ jobs:
       - name: Generate functional test allure report
         run: npm run functional:generate-report
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v3
         with:
           name: functional-test-output
           path: ./output
