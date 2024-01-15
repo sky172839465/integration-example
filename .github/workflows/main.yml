@@ -171,12 +171,16 @@ jobs:
             console.log(info)
             core.exportVariable('GH_PAGE_URL', info.ghPage)
 
+      - id: get-date
+        run: |
+          echo "DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
       - name: Get build comment
         if: ${{ always() }}
         uses: actions/github-script@v6
         env:
           TEST_URL: ${{needs.deploy_flyio.outputs.FLY_IO_URL}}
-          DATE: ${{ $(date +'%Y-%m-%d %H:%M:%S') }}
+          DATE: ${{ steps.get-date.outputs.DATE }}
         with:
           script: |
             const getComment = require('./scripts/get-comment')
