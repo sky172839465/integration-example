@@ -176,7 +176,7 @@ jobs:
         uses: actions/github-script@v6
         env:
           TEST_URL: ${{needs.deploy_flyio.outputs.FLY_IO_URL}}
-          DATE: $(date +'%Y-%m-%d %H:%M:%S')
+          DATE: ${{ $(date +'%Y-%m-%d %H:%M:%S') }}
         with:
           script: |
             const getComment = require('./scripts/get-comment')
