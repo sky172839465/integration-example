@@ -19,15 +19,20 @@ jobs:
         with:
           ref: gh-pages
 
-      - run: |
-          git ls-tree -r --name-only gh-pages@{30.days.ago} | cut -d/ -f1 | uniq | xargs rm -r
-          git add .
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "docs: 🤖 garbage collection old build results"
+      - id: remove
+        run: |
+          echo "OLD_FOLDERS=$(git ls-tree -r --name-only gh-pages@{30.days.ago} | cut -d/ -f1 | uniq)" >> $GITHUB_OUTPUT
+          if [ $OLD_FOLDERS != "" ]; then
+            rm -r $OLD_FOLDERS
+            git add .
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git commit -m "docs: 🤖 garbage collection old build results"
+          fi
 
       - name: Push changes
         uses: ad-m/github-push-action@master
+        if: ${{ steps.remove.outputs.OLD_FOLDERS != "" }}
         with:
           github_token: ${{ env.GITHUB_TOKEN }}
           branch: gh-pages
