@@ -32,7 +32,7 @@ jobs:
 
       - name: Push changes
         uses: ad-m/github-push-action@master
-        if: ${{ steps.remove.outputs.OLD_FOLDERS != "" }}
+        if: ${{ steps.remove.outputs.OLD_FOLDERS != '' }}
         with:
           github_token: ${{ env.GITHUB_TOKEN }}
           branch: gh-pages
