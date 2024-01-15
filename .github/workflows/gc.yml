@@ -22,7 +22,7 @@ jobs:
       - id: remove
         run: |
           echo "OLD_FOLDERS=$(git ls-tree -r --name-only gh-pages@{30.days.ago} | cut -d/ -f1 | uniq)" >> $GITHUB_OUTPUT
-          if [ $OLD_FOLDERS != "" ]; then
+          if [ -n "$OLD_FOLDERS" ]; then
             rm -r $OLD_FOLDERS
             git add .
             git config --local user.email "github-actions[bot]@users.noreply.github.com"
