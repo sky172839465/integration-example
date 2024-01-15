@@ -21,13 +21,16 @@ jobs:
 
       - id: remove
         run: |
-          echo "OLD_FOLDERS=$(git ls-tree -r --name-only gh-pages@{30.days.ago} | cut -d/ -f1 | uniq)" >> $GITHUB_OUTPUT
+          echo "OLD_FOLDERS=$(git ls-tree -r --name-only gh-pages@{30.days.ago} | cut -d/ -f1 | uniq)"
           if [ -n "$OLD_FOLDERS" ]; then
             rm -r $OLD_FOLDERS
             git add .
             git config --local user.email "github-actions[bot]@users.noreply.github.com"
             git config --local user.name "github-actions[bot]"
             git commit -m "docs: 🤖 garbage collection old build results"
+            echo "result=1" >> $GITHUB_OUTPUT
+          else
+            echo "result=''" >> $GITHUB_OUTPUT
           fi
 
       - name: Push changes
