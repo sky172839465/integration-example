@@ -1,9 +1,10 @@
 name: garbage collection
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  # pull_request:
+  #   types: [opened, reopened, synchronize]
+  # https://crontab.guru/#0_1_1_*_*
   schedule:
-    - cron: "0 2 * * 3,6"
+    - cron: "0 1 1 * *"
 permissions:
   actions: write
   contents: write
