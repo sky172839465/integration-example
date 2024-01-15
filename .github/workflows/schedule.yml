@@ -142,10 +142,13 @@ jobs:
       - name: Get build comment
         if: ${{ always() }}
         uses: actions/github-script@v6
+        env:
+          TEST_URL: ${{ env.TEST_URL }}
+          DATE: $(date +'%Y-%m-%d %H:%M:%S')
         with:
           script: |
             const getComment = require('./scripts/get-comment')
-            const comment = await getComment({ context }, '${{ env.TEST_URL }}')
+            const comment = await getComment({ context })
             console.log(comment)
             core.exportVariable('BUILD_COMMENT', comment)
           result-encoding: string
