@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jan 15 11:34:13 UTC 2024","Mon Jan 15 11:34:21 UTC 2024","8099","","[Windows-chrome] test func:","","[Windows-chrome] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""
+"passed","Mon Jan 15 11:34:21 UTC 2024","Mon Jan 15 11:34:28 UTC 2024","6757","","[Windows-chrome] test local:","","[Windows-chrome] test local:","test localhost content","test localhost content",""
+"passed","Mon Jan 15 11:34:24 UTC 2024","Mon Jan 15 11:34:33 UTC 2024","9062","","[Mac OS X-chrome] test local:","","[Mac OS X-chrome] test local:","test localhost content","test localhost content",""
+"passed","Mon Jan 15 11:34:13 UTC 2024","Mon Jan 15 11:34:24 UTC 2024","10934","","[Mac OS X-chrome] test func:","","[Mac OS X-chrome] test func:","test element exist 功能 ? && func","test element exist 功能 ? && func",""
