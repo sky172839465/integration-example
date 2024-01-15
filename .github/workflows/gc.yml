@@ -1,0 +1,34 @@
+name: garbage collection
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  schedule:
+    - cron: "0 2 * * 3,6"
+permissions:
+  actions: write
+  contents: write
+  id-token: write
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  garbage_collection:
+    name: Remove old build result on GH page
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - run: |
+          git ls-tree -r --name-only gh-pages@{30.days.ago} | cut -d/ -f1 | uniq | xargs rm -r
+          git add .
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "docs: 🤖 garbage collection old build results"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ env.GITHUB_TOKEN }}
+          branch: gh-pages
+          
