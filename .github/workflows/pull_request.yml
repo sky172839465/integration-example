@@ -133,7 +133,7 @@ jobs:
           user_email: "github-actions[bot]@users.noreply.github.com"
 
   clean_up:
-    needs: [deploy_flyio, functional_test]
+    needs: [static_and_unit_test, functional_test]
     name: Clean up
     runs-on: ubuntu-latest
     steps:
@@ -208,6 +208,15 @@ jobs:
               console.error('Job failed.')
               process.exit(1)
             }
+
+  pr_final_check:
+    needs: [clean_up]
+    name: PR final check
+    if: ${{ !env.IS_CLOSE_PR && always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "clean_up ${{ needs.clean_up.result }}"
 
   delete_develpoment:
     name: Delete Develpoment
