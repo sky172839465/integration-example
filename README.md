@@ -7,6 +7,11 @@ When CI/CD testing gets into trouble, how can we debug faster?
 This project demo front-end visualizes test results to improve development flow.
 
 ---
+### Skip pr & release build
+- pr title with `[skip ci]`
+- exmaple: https://github.com/sky172839465/integration-example/pull/35
+
+---
 
 ### Functional test in selenoid
 
