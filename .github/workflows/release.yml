@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - "master"
+env:
+  IS_SKIP_CI: contains(github.event.head_commit.message, '[skip ci]')
 jobs:
   release:
     name: "Release new version"
@@ -32,6 +34,7 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
 
       - name: Deploy to fly.io
+        if: ${{ !env.IS_SKIP_CI }}
         run: |
           GITHUB_REPOSITORY=${{ github.repository }}
           GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }}
