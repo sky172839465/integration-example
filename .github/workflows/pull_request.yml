@@ -15,7 +15,7 @@ env:
 jobs:
   deploy_flyio:
     name: Deploly fly.io review app
-    if: ${{ env.IS_OPEN_PR && env.IS_KEEP_CI }}
+    if: ${{ $IS_OPEN_PR && $IS_KEEP_CI }}
     runs-on: ubuntu-latest
     outputs:
       FLY_IO_URL: ${{ steps.deploy-pr.outputs.url }}
@@ -37,7 +37,7 @@ jobs:
 
   static_and_unit_test:
     name: Static test and unit test
-    if: ${{ env.IS_OPEN_PR && env.IS_KEEP_CI }}
+    if: ${{ $IS_OPEN_PR && $IS_KEEP_CI }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -213,7 +213,7 @@ jobs:
   pr_final_check:
     needs: [clean_up]
     name: PR final check
-    if: ${{ env.IS_OPEN_PR && always() }}
+    if: ${{ $IS_OPEN_PR && always() }}
     runs-on: ubuntu-latest
     steps:
       - run: |
@@ -221,7 +221,7 @@ jobs:
 
   delete_develpoment:
     name: Delete Develpoment
-    if: ${{ env.IS_CLOSE_PR && env.IS_KEEP_CI }}
+    if: ${{ $IS_CLOSE_PR && $IS_KEEP_CI }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
