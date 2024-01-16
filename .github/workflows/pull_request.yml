@@ -9,10 +9,12 @@ permissions:
   id-token: write
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  IS_CLOSE_PR: ${{ github.event.action == 'closed' }}
+  IS_SKIP_CI: contains(github.event.pull_request.labels.*.name, 'skip-ci')
 jobs:
   deploy_flyio:
     name: Deploly fly.io review app
-    if: github.event.action != 'closed'
+    if: ${{ !env.IS_CLOSE_PR && !env.IS_SKIP_CI }}
     runs-on: ubuntu-latest
     outputs:
       FLY_IO_URL: ${{ steps.deploy-pr.outputs.url }}
@@ -34,7 +36,7 @@ jobs:
 
   static_and_unit_test:
     name: Static test and unit test
-    if: github.event.action != 'closed'
+    if: ${{ !env.IS_CLOSE_PR && !env.IS_SKIP_CI }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -209,7 +211,7 @@ jobs:
 
   delete_develpoment:
     name: Delete Develpoment
-    if: github.event.action == 'closed'
+    if: ${{ env.IS_CLOSE_PR && !env.IS_SKIP_CI }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
