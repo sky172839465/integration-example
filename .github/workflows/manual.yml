@@ -9,7 +9,7 @@ on:
         required: true
         type: string
       isDestroy:
-        description: 'isDestory'
+        description: 'isDestoryApp'
         required: true
         type: boolean
 
