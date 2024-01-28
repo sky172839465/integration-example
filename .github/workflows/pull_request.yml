@@ -130,7 +130,7 @@ jobs:
           user_email: "github-actions[bot]@users.noreply.github.com"
 
   clean_up:
-    needs: [deploy_flyio, functional_test]
+    needs: [deploy_flyio, static_and_unit_test, functional_test]
     name: Clean up
     runs-on: ubuntu-latest
     steps:
