@@ -45,4 +45,4 @@ jobs:
 
   trigger_schedule:
     name: Trigger schedule
-    uses: .github/workflows/schedule.yml@main
+    uses: .github/workflows/schedule.yml@master
