@@ -46,4 +46,4 @@ jobs:
   trigger_schedule:
     name: Trigger schedule
     needs: [garbage_collection]
-    uses: .github/workflows/schedule.yml@master
+    uses: ./.github/workflows/schedule.yml
