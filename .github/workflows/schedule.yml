@@ -12,8 +12,6 @@ permissions:
   contents: write
   id-token: write
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  SOURCE_TREE_PROTECTED_BRANCH_TOKEN: ${{ secrets.SOURCE_TREE_PROTECTED_BRANCH_TOKEN }}
   TEST_URL: https://test-integration-example.fly.dev
 jobs:
   static_and_unit_test:
@@ -97,7 +95,7 @@ jobs:
         if: ${{ always() }}
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ env.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./e2e-reports
           destination_dir: ${{ github.run_id }}
           commit_message: "docs: 🤖 upload schedule report ${{ github.run_id }}"
@@ -166,7 +164,7 @@ jobs:
       - name: Comment build result to issue
         uses: peter-evans/create-or-update-comment@v3
         with:
-          token: ${{ env.SOURCE_TREE_PROTECTED_BRANCH_TOKEN }}
+          token: ${{ secrets.SOURCE_TREE_PROTECTED_BRANCH_TOKEN }}
           comment-id: 1890858131
           body: ${{ env.BUILD_COMMENT }}
           edit-mode: replace
