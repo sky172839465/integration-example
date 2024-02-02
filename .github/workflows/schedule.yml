@@ -11,7 +11,6 @@ permissions:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   SOURCE_TREE_PROTECTED_BRANCH_TOKEN: ${{ secrets.SOURCE_TREE_PROTECTED_BRANCH_TOKEN }}
-  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
   TEST_URL: https://test-integration-example.fly.dev
 jobs:
   static_and_unit_test:
@@ -57,6 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SAUCE_USERNAME: sky172839465
+      SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
     steps:
       - uses: actions/checkout@v4
 
