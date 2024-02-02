@@ -35,6 +35,11 @@ jobs:
             echo "result=''" >> $GITHUB_OUTPUT
           fi
 
+      - name: Test
+        run: |
+          echo "${{ steps.remove.outputs.result }}"
+          echo "${{ steps.remove.outputs.result == 1 }}"
+          echo "${{ steps.remove.outputs.result == '1' }}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         if: ${{ steps.remove.outputs.result == 1 }}
