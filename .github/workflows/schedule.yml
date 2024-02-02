@@ -57,7 +57,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SAUCE_USERNAME: sky172839465
-      SAUCE_ACCESS_KEY: ${{ env.SAUCE_ACCESS_KEY }}
     steps:
       - uses: actions/checkout@v4
 
