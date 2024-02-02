@@ -3,6 +3,10 @@ on:
   workflow_dispatch:
   workflow_call:
     secrets:
+      GITHUB_TOKEN:
+        required: true
+      SOURCE_TREE_PROTECTED_BRANCH_TOKEN:
+        required: true
       SAUCE_ACCESS_KEY:
         required: true
   schedule:
