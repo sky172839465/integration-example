@@ -47,3 +47,5 @@ jobs:
     name: Schedule
     needs: [garbage_collection]
     uses: ./.github/workflows/schedule.yml
+    secrets:
+      SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
