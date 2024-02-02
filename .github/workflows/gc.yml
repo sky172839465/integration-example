@@ -3,6 +3,7 @@ on:
   # pull_request:
   #   types: [opened, reopened, synchronize]
   # https://crontab.guru/#0_1_1_*_*
+  workflow_dispatch:
   schedule:
     - cron: "0 1 1 * *"
 permissions:
