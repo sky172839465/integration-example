@@ -10,8 +10,6 @@ permissions:
   actions: write
   contents: write
   id-token: write
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   garbage_collection:
     name: Remove old build result on GH page
@@ -40,7 +38,7 @@ jobs:
         uses: ad-m/github-push-action@master
         if: ${{ steps.remove.outputs.result == 1 }}
         with:
-          github_token: ${{ env.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
 
   trigger_schedule:
@@ -48,4 +46,6 @@ jobs:
     needs: [garbage_collection]
     uses: ./.github/workflows/schedule.yml
     secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SOURCE_TREE_PROTECTED_BRANCH_TOKEN: ${{ secrets.SOURCE_TREE_PROTECTED_BRANCH_TOKEN }}
       SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
