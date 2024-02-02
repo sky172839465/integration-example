@@ -46,6 +46,5 @@ jobs:
     needs: [garbage_collection]
     uses: ./.github/workflows/schedule.yml
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SOURCE_TREE_PROTECTED_BRANCH_TOKEN: ${{ secrets.SOURCE_TREE_PROTECTED_BRANCH_TOKEN }}
       SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
