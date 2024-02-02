@@ -2,6 +2,9 @@ name: schedule testing
 on:
   workflow_dispatch:
   workflow_call:
+    secrets:
+      SAUCE_ACCESS_KEY:
+        required: true
   schedule:
     - cron: "0 2 * * 3,6"
 permissions:
