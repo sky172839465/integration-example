@@ -1,9 +1,7 @@
 name: garbage collection
 on:
-  # pull_request:
-  #   types: [opened, reopened, synchronize]
-  # https://crontab.guru/#0_1_1_*_*
   workflow_dispatch:
+  # https://crontab.guru/#0_1_1_*_*
   schedule:
     - cron: "0 1 1 * *"
 permissions:
@@ -21,12 +19,12 @@ jobs:
 
       - id: remove
         run: |
-          OLD_FOLDERS=$(git ls-tree -r --name-only gh-pages@{30.days.ago} | cut -d/ -f1 | uniq)
-          echo OLD_FOLDERS=$OLD_FOLDERS
-          if [ -z "$OLD_FOLDERS" ]; then
+          ALL_FOLDERS=$(ls -d */)
+          echo ALL_FOLDERS=$ALL_FOLDERS
+          if [ -z "$ALL_FOLDERS" ]; then
             echo "result=''" >> $GITHUB_OUTPUT
           else
-            rm -r $OLD_FOLDERS
+            rm -r $ALL_FOLDERS
             git add .
             git config --local user.email "github-actions[bot]@users.noreply.github.com"
             git config --local user.name "github-actions[bot]"
