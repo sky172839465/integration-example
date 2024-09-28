@@ -18,7 +18,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@wdio/sauce-service": "^7.5.2",
     "allure-commandline": "^2.13.8",
-    "codeceptjs": "^3.0.6",
+    "codeceptjs": "^3.6.7",
     "cross-env": "^7.0.3",
     "debug": "^4.3.1",
     "eslint": "^7.24.0",
