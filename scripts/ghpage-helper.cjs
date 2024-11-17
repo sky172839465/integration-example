@@ -1,7 +1,6 @@
 const { readFileSync } = require('fs')
 const _ = require('lodash')
-
-const { name } = JSON.parse(readFileSync('../package.json'))
+const { name } = require('../package.json')
 
 const getGHPageInfo = async ({ context }, sha) => {
   const prefix = name
