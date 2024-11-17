@@ -2,7 +2,7 @@
 
 # Adjust NODE_VERSION as desired
 ARG NODE_VERSION=20
-FROM node:${NODE_VERSION} as build
+FROM node:${NODE_VERSION}-slim as build
 
 WORKDIR /react-app
 COPY package*.json .
