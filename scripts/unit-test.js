@@ -13,7 +13,7 @@ const getLogJSONContent = async (filePath) => {
   return _.get(json, 'testsuites.$')
 }
 
-module.exports = {
+export default {
   getLogPath,
   getLogJSONContent
 }

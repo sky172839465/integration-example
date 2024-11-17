@@ -40,7 +40,7 @@ const getLogsJSONContent = async (files) => {
   return flatTestCases
 }
 
-module.exports = {
+export default {
   getLogsPath,
   getLogsJSONContent
 }

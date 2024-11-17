@@ -113,4 +113,4 @@ const getComment = async ({ context = {} }) => {
 
 // getComment({}).then(console.log)
 
-module.exports = getComment
+export default getComment

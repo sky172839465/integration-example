@@ -8,6 +8,6 @@ const getJsonReport = async (xmlPath) => {
   return json
 }
 
-module.exports = {
+export default {
   getJsonReport
 }

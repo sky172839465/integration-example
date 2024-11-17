@@ -11,6 +11,6 @@ const getGHPageInfo = async ({ context }, sha) => {
   return { ghPage, destination_dir }
 }
 
-module.exports = {
+export default {
   getGHPageInfo
 }
