@@ -7,8 +7,9 @@
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4"
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.2.13",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
     "@codeceptjs/allure-legacy": "^1.0.2",
@@ -38,17 +39,11 @@
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1",
     "webdriverio": "^9.2.14",
-    "xml2js": "^0.6.2",
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.2.13",
-    "vite-tsconfig-paths": "^4.3.2"
+    "xml2js": "^0.6.2"
   },
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "eject": "react-scripts eject",
     "prepare": "husky install",
     "\n# OUTPUT CLEAN": "",
     "clean:build": "rm -rf build",
