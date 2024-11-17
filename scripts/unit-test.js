@@ -1,10 +1,10 @@
-const { getJsonReport } = require('./helper')
-const _ = require('lodash')
-const packageConfig = require('../package.json')
+import _ from 'lodash'
+
+import { getJsonReport } from './helper'
 
 const getLogPath = () => {
-  const unitTestReportName = _.get(packageConfig, 'jest-junit.outputName')
-  const reportDir = _.get(packageConfig, 'jest-junit.outputDirectory', '')
+  const unitTestReportName = 'unit-test.xml'
+  const reportDir = './reports'
   return `${reportDir}/${unitTestReportName}`
 }
 

@@ -1,5 +1,5 @@
-const fs = require('fs').promises
-const xml2js = require('xml2js')
+import { promises as fs } from 'fs'
+import xml2js from 'xml2js'
 
 const getJsonReport = async (xmlPath) => {
   const xml = await fs.readFile(xmlPath, 'utf-8')

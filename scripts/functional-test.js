@@ -1,6 +1,7 @@
-const fs = require('fs')
-const { getJsonReport } = require('./helper')
-const _ = require('lodash')
+import fs from 'fs'
+import _ from 'lodash'
+
+import { getJsonReport } from './helper'
 
 const getLogsPath = async (path = './output') => {
   const isExist = fs.existsSync(path)

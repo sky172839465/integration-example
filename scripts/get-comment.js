@@ -1,8 +1,9 @@
-const fs = require('fs')
-const path = require('path')
-const _ = require('lodash')
-const unitTest = require('./unit-test')
-const funcTest = require('./functional-test')
+import fs from 'fs'
+import _ from 'lodash'
+import path from 'path'
+
+import funcTest from './functional-test'
+import unitTest from './unit-test'
 
 const {
   TEST_URL,

@@ -1,5 +1,5 @@
 # Adjust NODE_VERSION as desired
-ARG NODE_VERSION=20.0
+ARG NODE_VERSION=20.18.0
 FROM node:${NODE_VERSION}-slim as build
 
 WORKDIR /app
