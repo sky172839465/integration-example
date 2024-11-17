@@ -1,8 +1,10 @@
-const { readdirSync, readFileSync, writeFileSync } = require('fs')
-const { spawn } = require('child_process')
-const _ = require('lodash')
-const SauceLabs = require('saucelabs').default
-const { TUNNEL_IDENTIFIER, config } = require('../codecept.conf')
+import { spawn } from 'child_process'
+import { readdirSync, readFileSync, writeFileSync } from 'fs'
+import _ from 'lodash'
+import SauceLabs from 'saucelabs'
+
+import { config,TUNNEL_IDENTIFIER } from '../codecept.conf'
+
 const { SAUCE_USERNAME, SAUCE_ACCESS_KEY, IS_GLOBAL_WEBSITE } = process.env
 
 const runWithSC = async () => {
