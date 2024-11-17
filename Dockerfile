@@ -1,7 +1,7 @@
 # https://github.com/fly-apps/hello-create-react-app/blob/main/Dockerfile
 
 # Adjust NODE_VERSION as desired
-ARG NODE_VERSION=20.0
+ARG NODE_VERSION=18.5.0
 FROM node:${NODE_VERSION}-slim as build
 
 WORKDIR /react-app
