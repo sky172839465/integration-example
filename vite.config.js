@@ -1,21 +1,30 @@
 import react from '@vitejs/plugin-react'
+import tailwindcss from 'tailwindcss'
 import { defineConfig } from 'vite'
-import svgr from 'vite-plugin-svgr'
 
-import { version } from './package.json'
+import { name } from './vite-spa-starter/package.json'
+const {
+  BASENAME
+} = process.env
 
 // https://vitejs.dev/config/
-export default () => {
+export default ({ mode }) => {
+  const isProd = mode === 'production'
+  const appBaseName = BASENAME ? `/${name}` : ''
+
   return defineConfig({
-    plugins: [
-      react(),
-      svgr({ svgrOptions: { icon: true } })
-    ],
-    define: {
-      'window.VERSION': `${JSON.stringify(version)}`
+    base: isProd
+      ? BASENAME ? appBaseName : undefined
+      : '',
+    plugins: [react()],
+    css: {
+      postcss: {
+        plugins: [tailwindcss()]
+      }
     },
-    server: {
-      port: 3000
+    define: {
+      'window.APP_BASENAME': `"${appBaseName}"`,
+      'window.IS_PROD': `${isProd}`
     }
   })
 }
