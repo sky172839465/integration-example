@@ -46,8 +46,8 @@
     "vite-tsconfig-paths": "^4.3.2"
   },
   "scripts": {
-    "start": "REACT_APP_VERSION=$(npm pkg get version) vite",
-    "build": "REACT_APP_VERSION=$(npm pkg get version) vite build",
+    "start": "vite",
+    "build": "vite build",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "\n# OUTPUT CLEAN": "",

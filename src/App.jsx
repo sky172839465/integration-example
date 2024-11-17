@@ -21,7 +21,7 @@ function App() {
           Learn React
           <p>
             version
-            {process.env.REACT_APP_VERSION}
+            {window.VERSION}
           </p>
         </a>
         <div>

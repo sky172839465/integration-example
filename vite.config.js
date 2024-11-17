@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { defineConfig, loadEnv, createFilter, transformWithEsbuild } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { version } from './package.json'
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
     setEnv(mode);
@@ -19,6 +20,9 @@ export default defineConfig(({ mode }) => {
             htmlPlugin(mode),
             svgrPlugin(),
         ],
+        define: {
+            'window.VERSION': `${JSON.stringify(version)}`
+        },
     };
 });
 function setEnv(mode) {
