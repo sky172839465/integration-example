@@ -1,9 +1,14 @@
-const { setHeadlessWhen } = require('@codeceptjs/configure')
-const packageConfig = require('./package.json')
+import { readFileSync } from 'fs'
+
+const { name } = JSON.parse(readFileSync('./package.json'))
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
-setHeadlessWhen(process.env.HEADLESS)
+// const setHeadless = async () => {
+//   const { setHeadlessWhen } = await import('@codeceptjs/configure').then(module => module.default)
+//   setHeadlessWhen(process.env.HEADLESS)
+// }
+// setHeadless()
 
 const {
   SAUCE_USERNAME,
@@ -22,7 +27,7 @@ const getSauceConfig = (browserName) => ({
     !IS_GLOBAL_WEBSITE &&
     { 'tunnel-identifier': TUNNEL_IDENTIFIER }
   ),
-  name: `${packageConfig.name}-${browserName}`,
+  name: `${name}-${browserName}`,
   build: `local-${Date.now()}`
 })
 
@@ -85,7 +90,7 @@ const config = {
     }
   },
   bootstrap: null,
-  name: `${packageConfig.name} functional test`,
+  name: `${name} functional test`,
   plugins: {
     retryFailedStep: {
       enabled: true
@@ -130,7 +135,9 @@ const config = {
   smartWait: true
 }
 
-module.exports = {
+const conf = {
   TUNNEL_IDENTIFIER,
   config
 }
+
+export default conf

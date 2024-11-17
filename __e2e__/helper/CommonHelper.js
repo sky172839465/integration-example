@@ -32,7 +32,7 @@ class CommonHelper extends Helper {
     const { TEST_URL } = process.env
     // const { isSelenoid } = this.getEnv()
     const helper = this._getHelper()
-    let url = TEST_URL || 'http://localhost:3000'
+    let url = TEST_URL || 'http://localhost:5173'
     // if (isSelenoid) {
     //   url = 'http://192.168.0.101:3000'
     // }

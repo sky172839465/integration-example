@@ -1,37 +1,22 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+
+
+import Root from './components/Root'
+import Router from './components/Router'
+import getRoutes from './components/Router/getRoutes'
+
+const pages = import.meta.glob('./**/pages/**/index.jsx')
+const loaders = import.meta.glob('./**/pages/**/index.loader.js')
+const dynamicRoutes = getRoutes(pages, loaders, true)
 
 function App() {
-  const [visible, setVisible] = useState(false)
-
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-          <p>
-            version
-            {window.VERSION}
-          </p>
-        </a>
-        <div>
-          <button id='btn' onClick={() => setVisible(!visible)}>setVisible</button>
-          {visible && (
-            <p id='result'>Hello world</p>
-          )}
-        </div>
-      </header>
-    </div>
+    <Root>
+      <Router
+        routes={dynamicRoutes}
+        isAuthRoutes={false}
+        isRootRoutes
+      />
+    </Root>
   )
 }
 

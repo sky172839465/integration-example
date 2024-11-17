@@ -1,11 +1,16 @@
-const { readdirSync, readFileSync, writeFileSync } = require('fs')
-const { spawn } = require('child_process')
-const _ = require('lodash')
-const SauceLabs = require('saucelabs').default
-const { TUNNEL_IDENTIFIER, config } = require('../codecept.conf')
+import { spawn } from 'child_process'
+import { readdirSync, readFileSync, writeFileSync } from 'fs'
+import _ from 'lodash'
+import SauceLabs from 'saucelabs'
+
+// import conf from '../codecept.conf.js'
+// const { config, TUNNEL_IDENTIFIER } = conf
+
 const { SAUCE_USERNAME, SAUCE_ACCESS_KEY, IS_GLOBAL_WEBSITE } = process.env
 
 const runWithSC = async () => {
+  const conf = await import('../codecept.conf.js').then(module => module.default)
+  const { config, TUNNEL_IDENTIFIER } = conf
   const isPrivateWebsite = !IS_GLOBAL_WEBSITE
   let sc
   if (isPrivateWebsite) {
