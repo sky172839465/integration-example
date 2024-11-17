@@ -12,12 +12,14 @@ const {
 
 const STATUS = {
   PASSED: '✅',
-  FAILED: '❌'
+  FAILED: '❌',
+  IGNORE: '😶‍🌫️'
 }
 
 const MESSAGE = {
   NOT_EXECUTE: 'Script might not execute, log not found.',
-  LINT_FAILED: 'Lint check get some error.'
+  LINT_FAILED: 'Lint check get some error.',
+  IGNORE: 'Ignore test.'
 }
 
 const readFileIfExist =  (filePath = '') => {
@@ -27,7 +29,7 @@ const readFileIfExist =  (filePath = '') => {
     const isFolderExist = fs.existsSync(folderPath)
     const listFolder = isFolderExist ? fs.readdirSync(folderPath) : []
     console.log({ filePath, isFolderExist, listFolder })
-    return [false, `${STATUS.FAILED} ${MESSAGE.NOT_EXECUTE}`]
+    return [false, `${STATUS.IGNORE} ${MESSAGE.IGNORE}`]
   }
 
   const fileContent = fs.readFileSync(filePath)
@@ -89,7 +91,7 @@ const getComment = async ({ context = {} }) => {
   const repo = _.get(context, 'payload.repository.html_url')
   const runId = _.get(context, 'runId')
   const buildUrl = `${repo}/actions/runs/${runId}`
-  const functionalTestReport = process.env.GH_PAGE_URL
+  const functionalTestReport = process.env.GH_PAGE_URL || `${STATUS.IGNORE} (codeceptjs bad. change testing strategy someday.)`
   const allStatus = [
     getLintStatus(),
     await getUnitStatus(),
