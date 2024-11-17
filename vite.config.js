@@ -1,21 +1,12 @@
 import react from '@vitejs/plugin-react'
 import tailwindcss from 'tailwindcss'
 import { defineConfig } from 'vite'
-
-import { name } from './vite-spa-starter/package.json'
-const {
-  BASENAME
-} = process.env
+import { version } from './package.json'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
   const isProd = mode === 'production'
-  const appBaseName = BASENAME ? `/${name}` : ''
-
   return defineConfig({
-    base: isProd
-      ? BASENAME ? appBaseName : undefined
-      : '',
     plugins: [react()],
     css: {
       postcss: {
@@ -23,8 +14,16 @@ export default ({ mode }) => {
       }
     },
     define: {
-      'window.APP_BASENAME': `"${appBaseName}"`,
+      'window.APP_BASENAME': '""',
+      'window.VERSION': `"${version}"`,
       'window.IS_PROD': `${isProd}`
+    },
+    test: {
+      browser: {
+        enabled: true,
+        name: 'chromium',
+        provider: 'playwright',
+      },
     }
   })
 }
