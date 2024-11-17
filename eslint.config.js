@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', '__e2e__'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {

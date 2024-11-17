@@ -1,7 +1,7 @@
 # https://github.com/fly-apps/hello-create-react-app/blob/main/Dockerfile
 
 # Adjust NODE_VERSION as desired
-ARG NODE_VERSION=18.5.0
+ARG NODE_VERSION=18.15.0
 FROM node:${NODE_VERSION}-slim as build
 
 WORKDIR /react-app
@@ -12,7 +12,7 @@ COPY vite.config.js .
 ENV NODE_ENV="production"
 
 RUN npm pkg delete scripts.prepare
-RUN npm ci
+RUN npm i
 
 # Copy application code
 COPY . .
@@ -22,4 +22,4 @@ RUN npm run build
 
 # server
 FROM nginx
-COPY --from=dist /react-app/dist /usr/share/nginx/html
+COPY --from=build /react-app/build /usr/share/nginx/html
