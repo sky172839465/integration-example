@@ -1,7 +1,7 @@
-import fs from 'fs'
-import _ from 'lodash'
+const fs = require('fs')
+const _ = require('lodash')
 
-import { getJsonReport } from './helper'
+const { getJsonReport } = require('./helper')
 
 const getLogsPath = async (path = './output') => {
   const isExist = fs.existsSync(path)
@@ -40,9 +40,7 @@ const getLogsJSONContent = async (files) => {
   return flatTestCases
 }
 
-const func = {
+module.exports = {
   getLogsPath,
   getLogsJSONContent
 }
-
-export default func

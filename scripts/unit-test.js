@@ -1,6 +1,6 @@
-import _ from 'lodash'
+const _ = require('lodash')
 
-import { getJsonReport } from './helper'
+const { getJsonReport } = require('./helper')
 
 const getLogPath = () => {
   const unitTestReportName = 'unit-test.xml'
@@ -13,9 +13,7 @@ const getLogJSONContent = async (filePath) => {
   return _.get(json, 'testsuites.$')
 }
 
-const func = {
+module.exports = {
   getLogPath,
   getLogJSONContent
 }
-
-export default func

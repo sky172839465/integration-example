@@ -1,9 +1,9 @@
-import fs from 'fs'
-import _ from 'lodash'
-import path from 'path'
+const fs = require('fs')
+const _ = require('lodash')
+const path = require('path')
 
-import funcTest from './functional-test'
-import unitTest from './unit-test'
+const funcTest = require('./functional-test')
+const unitTest = require('./unit-test')
 
 const {
   TEST_URL,
@@ -113,4 +113,4 @@ const getComment = async ({ context = {} }) => {
 
 // getComment({}).then(console.log)
 
-export default getComment
+module.exports = getComment

@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs'
-import _ from 'lodash'
+const { readFileSync } = require('fs')
+const _ = require('lodash')
 
 const { name } = JSON.parse(readFileSync('../package.json'))
 
@@ -12,8 +12,6 @@ const getGHPageInfo = async ({ context }, sha) => {
   return { ghPage, destination_dir }
 }
 
-const func = {
+module.exports = {
   getGHPageInfo
 }
-
-export default func
