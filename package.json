@@ -38,11 +38,16 @@
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1",
     "webdriverio": "^9.2.14",
-    "xml2js": "^0.6.2"
+    "xml2js": "^0.6.2",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.2.13",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "scripts": {
-    "start": "REACT_APP_VERSION=$(npm pkg get version) react-scripts start",
-    "build": "REACT_APP_VERSION=$(npm pkg get version) react-scripts build",
+    "start": "REACT_APP_VERSION=$(npm pkg get version) vite",
+    "build": "REACT_APP_VERSION=$(npm pkg get version) vite build",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "\n# OUTPUT CLEAN": "",
@@ -79,7 +84,8 @@
     "\n# CI SCRIPTS": "",
     "ci-lint": "npm run all-lint > lint.log",
     "ci-test": "npm run test:report",
-    "ci-functional": "cross-env IS_GLOBAL_WEBSITE=1 npm run functional:sauce"
+    "ci-functional": "cross-env IS_GLOBAL_WEBSITE=1 npm run functional:sauce",
+    "dev": "vite"
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
