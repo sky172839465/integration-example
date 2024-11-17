@@ -1,6 +1,6 @@
 {
   "name": "integration-example",
-  "version": "1.36.0",
+  "version": "1.37.0",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
