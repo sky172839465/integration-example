@@ -6,6 +6,7 @@ FROM node:${NODE_VERSION}-slim as build
 
 WORKDIR /react-app
 COPY package*.json .
+COPY vite.config.js .
 
 # Set production environment
 ENV NODE_ENV="production"
