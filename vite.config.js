@@ -19,11 +19,9 @@ export default ({ mode }) => {
       'window.IS_PROD': `${isProd}`
     },
     test: {
-      browser: {
-        enabled: true,
-        name: 'chromium',
-        provider: 'playwright',
-      },
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './setupTests.js'
     }
   })
 }

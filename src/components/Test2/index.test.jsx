@@ -1,9 +1,8 @@
-import { expect, test } from 'vitest'
-import { render } from 'vitest-browser-react'
-import Test from './index';
+import { render, screen } from '@testing-library/react';
+import App from './index';
 
-test('renders App component', async () => {
-  const { getByText } = render(<Test />);
-  const appElement = getByText(/index2/i);
-  await expect.element(appElement).toBeInTheDocument();
+test('renders App component without crashing', () => {
+  render(<App />);
+  const appElement = screen.getByText(/index2/i);
+  expect(appElement).toBeInTheDocument();
 });

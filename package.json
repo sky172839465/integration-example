@@ -26,22 +26,25 @@
   "devDependencies": {
     "@codeceptjs/allure-legacy": "^1.0.2",
     "@eslint/js": "^9.15.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.15",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
     "@flydotio/dockerfile": "^0.5.9",
     "@swc/core": "^1.9.2",
     "@swc/jest": "^0.2.37",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
     "@types/testing-library__react": "^10.2.0",
-    "@wdio/sauce-service": "^9.2.14",
+    "@vitejs/plugin-react": "^4.3.1",
     "@vitest/browser": "^2.1.0",
+    "@vitest/coverage-v8": "^2.1.5",
+    "@wdio/sauce-service": "^9.2.14",
     "allure-commandline": "^2.32.0",
+    "autoprefixer": "^10.4.20",
     "codeceptjs": "^3.6.7",
     "cross-env": "^7.0.3",
     "debug": "^4.3.7",
-    "autoprefixer": "^10.4.20",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -71,9 +74,9 @@
     "stylelint-config-standard": "^36.0.1",
     "vite": "^5.4.6",
     "vitest": "^2.1.5",
+    "vitest-browser-react": "^0.0.1",
     "webdriverio": "^9.2.14",
-    "xml2js": "^0.6.2",
-    "vitest-browser-react": "^0.0.1"
+    "xml2js": "^0.6.2"
   },
   "scripts": {
     "start": "vite",
@@ -95,9 +98,9 @@
     "all-fix": "npm-run-all fix:*",
     "\n# UNIT TEST SCRIPTS": "",
     "pre-test": "cross-env CI=true",
-    "test:base": "npm run pre-test -- jest --roots=__tests__",
-    "test": "npm run test:base -- --color --coverage --coverageReporters=text",
-    "test:report": "npm run test -- --testResultsProcessor=jest-junit",
+    "test:base": "npm run pre-test -- vitest",
+    "test": "npm run test:base -- --no-color",
+    "test:report": "npm run test -- --reporter=junit --outputFile.junit=./reporters/unit-test.xml --reporter=verbose",
     "\n# SELENOID SCRIPTS": "",
     "selenoid:download": "./bin/cm selenoid configure -b='chrome;firefox' --tmpfs 128 && ./bin/cm selenoid-ui download",
     "selenoid:run": "./scripts/create-selenoid.sh",
@@ -123,9 +126,5 @@
     "**/!(package.lock).{json,md,yml,sh}": [
       "prettier --write --ignore-unknown"
     ]
-  },
-  "jest-junit": {
-    "outputDirectory": "./reports",
-    "outputName": "unit-test.xml"
   }
 }
