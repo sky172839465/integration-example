@@ -8,6 +8,8 @@ const getJsonReport = async (xmlPath) => {
   return json
 }
 
-export default {
+const func =  {
   getJsonReport
 }
+
+export default func

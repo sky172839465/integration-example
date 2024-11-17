@@ -132,7 +132,9 @@ const config = {
   smartWait: true
 }
 
-export default {
+const conf = {
   TUNNEL_IDENTIFIER,
   config
 }
+
+export default conf

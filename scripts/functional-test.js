@@ -40,7 +40,9 @@ const getLogsJSONContent = async (files) => {
   return flatTestCases
 }
 
-export default {
+const func = {
   getLogsPath,
   getLogsJSONContent
 }
+
+export default func

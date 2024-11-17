@@ -12,6 +12,8 @@ const getGHPageInfo = async ({ context }, sha) => {
   return { ghPage, destination_dir }
 }
 
-export default {
+const func = {
   getGHPageInfo
 }
+
+export default func

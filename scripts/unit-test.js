@@ -13,7 +13,9 @@ const getLogJSONContent = async (filePath) => {
   return _.get(json, 'testsuites.$')
 }
 
-export default {
+const func = {
   getLogPath,
   getLogJSONContent
 }
+
+export default func
