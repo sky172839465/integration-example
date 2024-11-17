@@ -9,6 +9,9 @@ permissions:
   id-token: write
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   deploy_flyio:
     name: Deploly fly.io review app
@@ -20,14 +23,11 @@ jobs:
       name: pr-${{ github.event.number }}
       url: ${{ steps.deploy-pr.outputs.url }}
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-
       - uses: actions/checkout@v4
 
       - name: Deploy PR
         id: deploy-pr
-        uses: superfly/fly-pr-review-apps@1.2.1
+        uses: superfly/fly-pr-review-apps@1.3.0
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
@@ -41,11 +41,11 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: latest
 
       - name: Cache node_modules
         id: cache-node-modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
@@ -59,12 +59,12 @@ jobs:
       - name: Unit test
         run: npm run ci-test
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: lint-output
           path: lint.log
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: unit-test-output
           path: ./reports
@@ -86,7 +86,7 @@ jobs:
 
       - name: Cache node_modules
         id: cache-node-modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
@@ -104,14 +104,14 @@ jobs:
       - name: Generate functional test allure report
         run: npm run functional:generate-report
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: functional-test-output
           path: ./output
 
       - name: Get report info
         if: ${{ always() }}
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const { getGHPageInfo } = require('./scripts/ghpage-helper')
@@ -120,7 +120,7 @@ jobs:
 
       - name: Upload report to GitHub page
         if: ${{ always() }}
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./e2e-reports
@@ -138,7 +138,7 @@ jobs:
 
       - name: Cache node_modules
         id: cache-node-modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
@@ -146,23 +146,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: lint-output
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: unit-test-output
           path: ./reports
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: functional-test-output
           path: ./output
 
       - name: Get report info
         if: ${{ always() }}
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const { getGHPageInfo } = require('./scripts/ghpage-helper')
@@ -176,7 +176,7 @@ jobs:
 
       - name: Get build comment
         if: ${{ always() }}
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         env:
           TEST_URL: ${{needs.deploy_flyio.outputs.TEST_URL}}
           DATE: ${{ steps.get-date.outputs.DATE }}
@@ -203,7 +203,7 @@ jobs:
 
       - name: Last check build status
         if: ${{ always() }}
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             if (process.env.BUILD_COMMENT.includes('❌')) {
@@ -220,7 +220,7 @@ jobs:
 
       - name: Delete pr app
         id: deploy
-        uses: superfly/fly-pr-review-apps@1.2.0
+        uses: superfly/fly-pr-review-apps@1.3.0
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
