@@ -12,7 +12,7 @@ COPY vite.config.js .
 ENV NODE_ENV="production"
 
 RUN npm pkg delete scripts.prepare
-RUN npm i
+RUN npm install
 
 # Copy application code
 COPY . .
