@@ -1,6 +1,7 @@
 import react from '@vitejs/plugin-react'
 import tailwindcss from 'tailwindcss'
 import { defineConfig } from 'vite'
+
 import { version } from './package.json'
 
 // https://vitejs.dev/config/
