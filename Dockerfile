@@ -11,7 +11,7 @@ COPY package*.json .
 ENV NODE_ENV="production"
 
 RUN npm pkg delete scripts.prepare
-RUN npm ci
+RUN npm i
 
 # Copy application code
 COPY . .
