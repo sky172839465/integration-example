@@ -1,7 +1,9 @@
-import { setHeadlessWhen } from '@codeceptjs/configure'
+// import { setHeadlessWhen } from '@codeceptjs/configure'
 import { readFileSync } from 'fs'
 
 const { name } = JSON.parse(readFileSync('./package.json'))
+
+const { setHeadlessWhen } = await import('@codeceptjs/configure').then(module => module.default)
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run

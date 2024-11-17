@@ -114,7 +114,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const { getGHPageInfo } = require('./scripts/ghpage-helper')
+            import { getGHPageInfo } import './scripts/ghpage-helper'
             const info = await getGHPageInfo({ context })
             core.exportVariable('E2E_REPORT_DIR', `./${info.destination_dir}`)
 
@@ -165,7 +165,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const { getGHPageInfo } = require('./scripts/ghpage-helper')
+            import { getGHPageInfo } import './scripts/ghpage-helper'
             const info = await getGHPageInfo({ context })
             console.log(info)
             core.exportVariable('GH_PAGE_URL', info.ghPage)
@@ -182,7 +182,7 @@ jobs:
           DATE: ${{ steps.get-date.outputs.DATE }}
         with:
           script: |
-            const getComment = require('./scripts/get-comment')
+            import getComment import './scripts/get-comment'
             const comment = await getComment({ context })
             console.log(comment)
             core.exportVariable('BUILD_COMMENT', comment)
