@@ -4,11 +4,11 @@ const { name } = JSON.parse(readFileSync('./package.json'))
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
-const setHeadless = async () => {
-  const { setHeadlessWhen } = await import('@codeceptjs/configure').then(module => module.default)
-  setHeadlessWhen(process.env.HEADLESS)
-}
-setHeadless()
+// const setHeadless = async () => {
+//   const { setHeadlessWhen } = await import('@codeceptjs/configure').then(module => module.default)
+//   setHeadlessWhen(process.env.HEADLESS)
+// }
+// setHeadless()
 
 const {
   SAUCE_USERNAME,
