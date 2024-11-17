@@ -2,8 +2,8 @@ const fs = require('fs')
 const _ = require('lodash')
 const path = require('path')
 
-const funcTest = require('./functional-test')
-const unitTest = require('./unit-test')
+const funcTest = require('./functional-test.cjs')
+const unitTest = require('./unit-test.cjs')
 
 const {
   TEST_URL,

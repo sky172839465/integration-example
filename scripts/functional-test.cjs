@@ -1,7 +1,7 @@
 const fs = require('fs')
 const _ = require('lodash')
 
-const { getJsonReport } = require('./helper')
+const { getJsonReport } = require('./helper.cjs')
 
 const getLogsPath = async (path = './output') => {
   const isExist = fs.existsSync(path)

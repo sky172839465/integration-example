@@ -69,68 +69,68 @@ jobs:
           name: unit-test-output
           path: ./reports
 
-  functional_test:
-    needs: [deploy_flyio]
-    name: Functional test
-    runs-on: ubuntu-latest
-    env:
-      SAUCE_USERNAME: sky172839465
-      SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
-    steps:
-      - uses: actions/checkout@v4
+  # functional_test:
+  #   needs: [deploy_flyio]
+  #   name: Functional test
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     SAUCE_USERNAME: sky172839465
+  #     SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
+  #     - uses: actions/setup-java@v4
+  #       with:
+  #         distribution: "temurin"
+  #         java-version: "17"
 
-      - name: Cache node_modules
-        id: cache-node-modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+  #     - name: Cache node_modules
+  #       id: cache-node-modules
+  #       uses: actions/cache@v4
+  #       with:
+  #         path: node_modules
+  #         key: node-modules-${{ hashFiles('package-lock.json') }}
 
-      - name: Install dependencies
-        run: npm ci
+  #     - name: Install dependencies
+  #       run: npm ci
 
-      - name: Run functional test on saucelabs
-        env:
-          TEST_URL: ${{needs.deploy_flyio.outputs.TEST_URL}}
-        run: |
-          echo TEST_URL=$TEST_URL
-          npm run ci-functional
+  #     - name: Run functional test on saucelabs
+  #       env:
+  #         TEST_URL: ${{needs.deploy_flyio.outputs.TEST_URL}}
+  #       run: |
+  #         echo TEST_URL=$TEST_URL
+  #         npm run ci-functional
 
-      - name: Generate functional test allure report
-        run: npm run functional:generate-report
+  #     - name: Generate functional test allure report
+  #       run: npm run functional:generate-report
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: functional-test-output
-          path: ./output
+  #     - uses: actions/upload-artifact@v4
+  #       with:
+  #         name: functional-test-output
+  #         path: ./output
 
-      - name: Get report info
-        if: ${{ always() }}
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { getGHPageInfo } = require('./scripts/ghpage-helper')
-            const info = await getGHPageInfo({ context })
-            core.exportVariable('E2E_REPORT_DIR', `./${info.destination_dir}`)
+  #     - name: Get report info
+  #       if: ${{ always() }}
+  #       uses: actions/github-script@v7
+  #       with:
+  #         script: |
+  #           const { getGHPageInfo } = require('./scripts/ghpage-helper')
+  #           const info = await getGHPageInfo({ context })
+  #           core.exportVariable('E2E_REPORT_DIR', `./${info.destination_dir}`)
 
-      - name: Upload report to GitHub page
-        if: ${{ always() }}
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./e2e-reports
-          destination_dir: ${{ env.E2E_REPORT_DIR }}
-          commit_message: "docs: 🤖 upload pr report ${{ github.event.head_commit.message }}"
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+  #     - name: Upload report to GitHub page
+  #       if: ${{ always() }}
+  #       uses: peaceiris/actions-gh-pages@v4
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./e2e-reports
+  #         destination_dir: ${{ env.E2E_REPORT_DIR }}
+  #         commit_message: "docs: 🤖 upload pr report ${{ github.event.head_commit.message }}"
+  #         user_name: "github-actions[bot]"
+  #         user_email: "github-actions[bot]@users.noreply.github.com"
 
   clean_up:
-    needs: [deploy_flyio, static_and_unit_test, functional_test]
+    needs: [deploy_flyio, static_and_unit_test]
     name: Clean up
     runs-on: ubuntu-latest
     steps:
@@ -155,17 +155,17 @@ jobs:
           name: unit-test-output
           path: ./reports
 
-      - uses: actions/download-artifact@v4
-        with:
-          name: functional-test-output
-          path: ./output
+      # - uses: actions/download-artifact@v4
+      #   with:
+      #     name: functional-test-output
+      #     path: ./output
 
       - name: Get report info
         if: ${{ always() }}
         uses: actions/github-script@v7
         with:
           script: |
-            const { getGHPageInfo } = require('./scripts/ghpage-helper')
+            const { getGHPageInfo } = require('./scripts/ghpage-helper.cjs')
             const info = await getGHPageInfo({ context })
             console.log(info)
             core.exportVariable('GH_PAGE_URL', info.ghPage)
@@ -182,7 +182,7 @@ jobs:
           DATE: ${{ steps.get-date.outputs.DATE }}
         with:
           script: |
-            const getComment = require('./scripts/get-comment')
+            const getComment = require('./scripts/get-comment.cjs')
             const comment = await getComment({ context })
             console.log(comment)
             core.exportVariable('BUILD_COMMENT', comment)

@@ -1,6 +1,6 @@
 const _ = require('lodash')
 
-const { getJsonReport } = require('./helper')
+const { getJsonReport } = require('./helper.cjs')
 
 const getLogPath = () => {
   const unitTestReportName = 'unit-test.xml'
