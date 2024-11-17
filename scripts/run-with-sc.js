@@ -3,7 +3,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import _ from 'lodash'
 import SauceLabs from 'saucelabs'
 
-import { config,TUNNEL_IDENTIFIER } from '../codecept.conf'
+import { config, TUNNEL_IDENTIFIER } from '../codecept.conf.js'
 
 const { SAUCE_USERNAME, SAUCE_ACCESS_KEY, IS_GLOBAL_WEBSITE } = process.env
 
