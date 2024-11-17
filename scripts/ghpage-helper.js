@@ -1,6 +1,7 @@
+import { readFileSync } from 'fs'
 import _ from 'lodash'
 
-import { name } from '../package.json' assert { type: 'json' }
+const { name } = JSON.parse(readFileSync('../package.json'))
 
 const getGHPageInfo = async ({ context }, sha) => {
   const prefix = name
