@@ -4,6 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import tailwind from 'eslint-plugin-tailwindcss'
+import eslintImport from 'eslint-plugin-import'
 import globals from 'globals'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -37,7 +38,8 @@ export default [
     plugins: {
       react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
+      'import': eslintImport
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -77,6 +79,8 @@ export default [
       'jsx-quotes': ['error', 'prefer-single'],
       'react/jsx-one-expression-per-line': 'warn',
       'tailwindcss/no-custom-classname': 'off'
+      "import/no-unresolved": "off",
+      "import/assertions": "off"
     }
   },
   {

@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-import { name } from '../package.json'
+import { name } from '../package.json' assert { type: 'json' }
 
 const getGHPageInfo = async ({ context }, sha) => {
   const prefix = name

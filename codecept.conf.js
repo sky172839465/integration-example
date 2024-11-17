@@ -1,6 +1,6 @@
 import { setHeadlessWhen } from '@codeceptjs/configure'
 
-import { name } from './package.json'
+import { name } from './package.json' assert { type: 'json' }
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
