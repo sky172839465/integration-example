@@ -1,2 +1,4 @@
 package-lock.json
 .husky/
+*.js
+*.jsx

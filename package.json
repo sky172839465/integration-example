@@ -2,6 +2,7 @@
   "name": "integration-example",
   "version": "1.38.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "lodash": "^4.17.21",
@@ -12,6 +13,7 @@
     "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.9.1",
     "@codeceptjs/allure-legacy": "^1.0.2",
     "@flydotio/dockerfile": "^0.5.9",
     "@testing-library/jest-dom": "^6.6.3",
@@ -22,9 +24,14 @@
     "codeceptjs": "^3.6.7",
     "cross-env": "^7.0.3",
     "debug": "^4.3.7",
-    "eslint": "^9.15.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.2",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.2",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.9.0",
     "husky": "^9.1.6",
     "jest-junit": "^16.0.0",
     "lint-staged": "^15.2.10",
