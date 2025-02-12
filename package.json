@@ -35,7 +35,7 @@
     "@types/react-dom": "^18.3.0",
     "@types/testing-library__react": "^10.2.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "@vitest/coverage-v8": "^2.1.5",
+    "@vitest/coverage-v8": "^2.1.9",
     "@wdio/sauce-service": "^9.2.14",
     "allure-commandline": "^2.32.0",
     "autoprefixer": "^10.4.20",
@@ -66,7 +66,7 @@
     "saucelabs": "^8.0.0",
     "source-map-explorer": "^2.5.3",
     "vite": "^5.4.14",
-    "vitest": "^2.1.5",
+    "vitest": "^2.1.9",
     "webdriverio": "^9.2.14",
     "xml2js": "^0.6.2"
   },
