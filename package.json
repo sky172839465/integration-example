@@ -65,7 +65,7 @@
     "prettier-plugin-sh": "^0.14.0",
     "saucelabs": "^8.0.0",
     "source-map-explorer": "^2.5.3",
-    "vite": "^6.2.5",
+    "vite": "^6.2.6",
     "vitest": "^3.0.9",
     "webdriverio": "^9.2.14",
     "xml2js": "^0.6.2"
