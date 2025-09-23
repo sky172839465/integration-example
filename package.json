@@ -39,7 +39,7 @@
     "@wdio/sauce-service": "^9.2.14",
     "allure-commandline": "^2.32.0",
     "autoprefixer": "^10.4.20",
-    "codeceptjs": "^3.7.4",
+    "codeceptjs": "^3.7.5",
     "cross-env": "^7.0.3",
     "debug": "^4.3.7",
     "eslint": "^9.10.0",
